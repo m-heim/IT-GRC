@@ -4,24 +4,24 @@
 ### Aufgabe 1.1 - Was versteht man unter IT-Management?
 - IT-Management bezieht sich auf die Planung, Koordinierung, Implementierung und Überwachung von IT-Ressourcen und -Aktivitäten innerhalb einer Organisation. 
 - Aufgaben:
-- Strategieentwicklung
-- Ressourcenallokation
-- Technologieauswahl und Implementierung
-- Sicherheit und Comliance
-- Betrieb und Wartung
-- Change-Management
-- Performance Monitoring und Optimierung
+  - Strategieentwicklung
+  - Ressourcenallokation
+  - Technologieauswahl und Implementierung
+  - Sicherheit und Comliance
+  - Betrieb und Wartung
+  - Change-Management
+  - Performance Monitoring und Optimierung
 
 ### Aufgabe 1.2 - Welche Bedeutung hat IT-Management für (mittelständische) Unternehmen? Welche Ziele verfolgt man wohl damit?
 - IT-Management spielt eine große Rolle in mittelständischen Unternehmen, da diese eine wesentliche Komponente für den Erfolg und das Wachstum eines Unternehmens darstellt.
 - Ziele wären bspw.:
-- Effizienzsteigerung
-- Kostenoptimierung
-- Verbesserung der Wettbewerbsfähigkeit
-- Risikomanagement
-- Geschäftswachstum
-- Compliance
-- Kundenzufriedenheit
+  - Effizienzsteigerung
+  - Kostenoptimierung
+  - Verbesserung der Wettbewerbsfähigkeit
+  - Risikomanagement
+  - Geschäftswachstum
+  - Compliance
+  - Kundenzufriedenheit
 
 ## Aufgabe 2
 ### Aufgabe 2.1 - Welche Aufgaben hat ein(e) IT-Leiter(in) im Unternehmen?
