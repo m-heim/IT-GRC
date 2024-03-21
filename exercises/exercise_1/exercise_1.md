@@ -55,8 +55,7 @@
 - Anbieter und Lieferantenmanagement
 - Anwendungsentwicklung
 
-### Aufgabe 3.2 - Welche Aufgaben werden durch eine IT-Organisation in einem Unternehmen grundsätz-
-lich erbracht?
+### Aufgabe 3.2 - Welche Aufgaben werden durch eine IT-Organisation in einem Unternehmen grundsätzlich erbracht?
 - https://www.johanning.de/it-organisation/
 ![alt text](it-org-mit-prozessorg-jpg-klein.jpg)
 
