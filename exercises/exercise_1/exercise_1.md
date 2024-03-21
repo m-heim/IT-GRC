@@ -58,8 +58,10 @@
 ### Aufgabe 3.2 - Zeigen Sie Beispiele grundsätzlicher Aufbauorganisationen, die Sie recherchieren konnten (zur Leitung vgl. Aufgabe 2).
 - https://www.johanning.de/it-organisation/
 
-![alt text](it-org-mit-prozessorg-jpg-klein.jpg)
+![Beispiel 1](it-org-mit-prozessorg-jpg-klein.jpg)
+
+***
 
 - https://www.fsgu-akademie.de/lexikon/it-organisation/
 
-![alt text](aufbau-einer-it-organisation.jpg)
+![Beispiel 2](aufbau-einer-it-organisation.jpg)
