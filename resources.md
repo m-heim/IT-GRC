@@ -17,6 +17,7 @@
 ## Standards
 - https://www.iso.org/standard/57914.html
 - https://www.itu.int/rec/T-REC-X.1252/en
+- https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/Kompendium/Zuordnung_ISO_und_IT_Grundschutz.pdf?__blob=publicationFile&v=5
 
 ## Products
 - https://rz10.de/sap-berechtigungen/sap-identity-management/iam-tools-sap-vergleich/
