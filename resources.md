@@ -13,6 +13,7 @@
 ## Papers
 - https://reposit.haw-hamburg.de/bitstream/20.500.12738/8064/1/Leitfaden_Identity_Access_Management_dConta.pdf
 - https://vsis-www.informatik.uni-hamburg.de/getDoc.php/thesis/130/identitaet.pdf
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7380701
 
 ## Standards
 - https://www.iso.org/standard/57914.html
