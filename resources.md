@@ -9,6 +9,7 @@
 - https://www.microsoft.com/de-de/security/business/security-101/what-is-identity-access-management-iam
 - https://aws.amazon.com/de/iam/
 - https://www.pingidentity.com/de/resources/blog/post/best-identity-and-access-management-iam-tools.html
+- https://www.oracle.com/de/security/identity-management/what-is-iam/
 
 ## Papers
 - https://reposit.haw-hamburg.de/bitstream/20.500.12738/8064/1/Leitfaden_Identity_Access_Management_dConta.pdf
@@ -27,3 +28,7 @@
 - https://www.sap.com/germany/products/financial-management/cloud-iam.html
 - https://www.solarwinds.com/de/access-rights-manager
 - https://www.pingidentity.com/de/solutions.html
+
+## Berechtigung
+- https://dl.acm.org/doi/pdf/10.1145/234313.234412
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7042715
