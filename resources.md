@@ -28,6 +28,7 @@
 - https://www.sap.com/germany/products/financial-management/cloud-iam.html
 - https://www.solarwinds.com/de/access-rights-manager
 - https://www.pingidentity.com/de/solutions.html
+- https://www.cisco.com/site/us/en/products/security/identity-services-engine/index.html
 
 ## Berechtigung
 - https://dl.acm.org/doi/pdf/10.1145/234313.234412

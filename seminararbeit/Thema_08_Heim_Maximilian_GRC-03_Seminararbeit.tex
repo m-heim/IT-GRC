@@ -1,5 +1,7 @@
 \documentclass[10pt]{article}
 \usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{cleveref}
 \usepackage[%
   backend=biber,
   style=alphabetic,
@@ -15,7 +17,14 @@
 \section{Einleitung}
 \subsection{Aufgabenstellung}
 \subsection{Forschungsfragen}
+Diese Seminararbeit soll dem Leser eine gute Grundlage dafür geben, sich mit dem Thema Identitäts- und Berechtigungsmanagement auseinanderzusetzen.
+\begin{itemize}
+  \item In Kapitel ~\cref{sec:grundlagen} werden die Begriffe Identität, Berechtigung und Identitäts- und Berechtigungsmanagement eingeführt um eine Grundlage für die weitere Arbeit zu haben.
+  \item In Kapitel ~\cref{sec:existing} werden die existierenden Methoden, Standards, Technologien und Tools zusammenfassend beschreiben.
+  \item In Kapitel ~\cref{sec:betrieb} wird der Kontext von IAM im betrieblichen Kontext beschrieben.
+\end{itemize}
 \section{Grundlagen}
+\label{sec:grundlagen}
 \subsection{Einordnung}
 \subsection{Identität}
 Um den Begriff Identitätsmanagement zu definieren sollte zuerst der Begriff der Identität definiert werden. In der Philosophie wird Identität über die Ununterscheidbarkeit von Dingen definiert. Nach dem Identitätsprinzip sind zwei Dinge genau dann identisch wenn sich zwischen ihnen keine Unterschiede finden lassen.
@@ -26,6 +35,7 @@ Berechtigungen beschreiben welche Identitäten auf welche Ressourcen zugreifen d
 \subsection{Berechtigungsmanagement}
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 \section{Methoden, Technologien und Tools}
+\label{sec:existing}
 \subsection{Betriebliche Motivation}
 \subsection{Standards}
 \paragraph{BSI}
@@ -44,8 +54,10 @@ Das Unternehmen Microsoft bietet mit dem Produkt "Microsoft Entra ID" eine Cloud
 Das Unternehmen SAP bietet mit dem Produkt "SAP Cloud Identity Access Governenace" eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement. SAP selbst schreibt dem Produkt eine intuitive Bedienung, hohe Anpassbarkeit und skalierbare Funktionen zu.
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 \section{Betriebliches Identitäts- und Berechtigungsmanagement}
+\label{sec:betrieb}
 \subsection{Überblick}
 \subsection{Organisatorische Aspekte}
+Das Identitäts- und Berechtigungsmanagement fällt unter die Domäne der Informations- und IT-Sicherheit. Auf der Führungsebene ist im Unternehmen der Chief Information Security Officer (CISO) für die Umsetzung des Informationssicherheitsmanagementsystems (CISO) verantwortlich. Daher trägt der CISO in diesem Kontext eine Führende Rolle. Im Fall von umfangreichen Anforderungen an das System kann die Umsetzung des IAM ein ganzes Team benötigen.
 \subsection{Technische Aspekte}
 \subsection{Wirtschaftliche Aspekte}
 \subsection{Erkenntnisse im Kontext von IT-GRC}
