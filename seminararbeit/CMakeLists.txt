@@ -6,7 +6,10 @@ add_custom_target(${SEMINAR_FILE}.tex
 COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/${SEMINAR_FILE}.tex ${CMAKE_BINARY_DIR})
 add_custom_target(${SEMINAR_FILE}.pdf
 latexmk -pdf ${SEMINAR_FILE}.tex
-DEPENDS ${SEMINAR_FILE}.tex)
+DEPENDS ${SEMINAR_FILE}.tex assets)
+add_custom_target(assets
+COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/assets ${CMAKE_CURRENT_BINARY_DIR}/assets
+DEPENDS assets)
 add_custom_target(${BIB_FILE}
 COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/${BIB_FILE} ${CMAKE_CURRENT_BINARY_DIR}/${BIB_FILE}
 DEPENDS ${BIB_FILE})

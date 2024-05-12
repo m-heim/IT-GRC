@@ -1,5 +1,6 @@
 \documentclass[10pt]{article}
 \usepackage[ngerman]{babel}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage[%
@@ -27,13 +28,21 @@ Diese Seminararbeit soll dem Leser eine gute Grundlage dafür geben, sich mit de
 \label{sec:grundlagen}
 \subsection{Einordnung}
 \subsection{Identität}
-Um den Begriff Identitätsmanagement zu definieren sollte zuerst der Begriff der Identität definiert werden. In der Philosophie wird Identität über die Ununterscheidbarkeit von Dingen definiert. Nach dem Identitätsprinzip sind zwei Dinge genau dann identisch wenn sich zwischen ihnen keine Unterschiede finden lassen.
+Um den Begriff Identitätsmanagement zu definieren sollte zuerst der Begriff der Identität definiert werden. In der Philosophie wird Identität über die Ununterscheidbarkeit von Dingen definiert. Nach dem Identitätsprinzip sind zwei Dinge genau dann identisch wenn sich zwischen ihnen keine Unterschiede finden lassen. Hierbei geht es um die Fragestellung "wer bist du?".
 \subsection{Identitätsmanagement}
 Identitätsmanagement beschreibt die Verwaltung von digitalen Identitäten. Hierbei werden Prozesse für die Provisonierung, Änderung und Deprovisionierung von digitalen Identitäten definiert und umgesetzt.~\cite{sharma2016identity}
 \subsection{Berechtigung}
-Berechtigungen beschreiben welche Identitäten auf welche Ressourcen zugreifen darf. Dieser Prozess findet nach der Feststellung der Identität statt.
+Berechtigungen beschreiben welche Identitäten auf welche Ressourcen zugreifen darf. Dieser Prozess findet nach der Feststellung der Identität statt. Hierbei geht es um die Fragestellung "was darf er/sie/es?".
 \subsection{Berechtigungsmanagement}
+Berechtigungsmanagement ist verantwortlich für die Festlegung welche Nutzer/Entitäten auf welche Ressourcen Zugriff haben. Beispiele hierfür sind der Zugriff auf eine Datenbank, der Zugriff auf Dokumente oder der Konfiguration von Systemen. Das Ziel ist hierbei ist das Least-Privilege-Prinzip (PoLP) umzusetzen. Das Berechtigungsmanagement besteht aus verschiedenen Aspekten. So z.B. der Provisionierung von Rechten, der Compliance mit Standards und der konkreten technischen Umsetzung der Authorisierung.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{assets/accessmanagement.png}
+  \label{fig:accesscontrol}
+  \caption{Zugriffskontrolle}
+\end{figure}
 \subsection{Erkenntnisse im Kontext von IT-GRC}
+Das Identitäts und Berechtigungsmanagement ist eine zentrale Disziplin im Kontext der IT-GRC. Die sorgfältige Umsetzung von Identitäts- und Berechtigungsmanagement hilft dabei IT-Sicherheits-Risiken zu minimieren und die Compliance von Standards zu gewährleisten.
 \section{Methoden, Technologien und Tools}
 \label{sec:existing}
 \subsection{Betriebliche Motivation}
@@ -48,11 +57,25 @@ Das National Institute of Standards and Technology (NIST) publizierte die "NIST 
 \subsection{Methoden und Prozesse}
 \subsection{Technologien und Tools}
 IAM Tools ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM.
+\paragraph{SAML}
+SAML ist ein weit verbreiteter Standard zur Umsetzung von Sicherheits Assertationen. Mit SAML wird ein XML Format definiert welches zur Authentifizierung und Authorisierung von Nutzern verwendet werden kann. Im Kontext von SAML werden verschiedene Begrifflichkeiten definiert.
+\begin{itemize}
+  \item Assertation - Eine Assertation über die Charakteristiken und Attribute eines Subjekts. So z.B. die Zugehörigkeit zu einer Gruppe oder der Besitz eines Attributs.
+  \item Identity Provider (IdP) - Der Server der für die eigentliche Bearbeitung der Assertation zuständig ist. Er erhält die Anfrage und leitet die Antwort an den Service Provider weiter.
+  \item Service Provider (SP) - Das Ziel der Authentifizierung/Authorisierung, dieser stellt eine Ressource/Service zur Verfügung.
+\end{itemize}
+~\cite{hughes2005security}
+\paragraph{OAuth}
+
+\paragraph{IBM Security Verify}
+Das Unternehmen IBM bietet mit dem Produkt "IBM Security Verify" eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement. Dieses Produkt bietet umfangreiche Funktionalitäten wie SSO, MFA, KI gestütze Risikobewertung von Zugriffen und Identitätsanalyse, d.h. die Analyse von Identitäten und Berechtigungen zum Zweck der Identifizierung von Abweichungen.
 \paragraph{Microsoft Active Directory}
 \paragraph{Microsoft Entra ID}
 Das Unternehmen Microsoft bietet mit dem Produkt "Microsoft Entra ID" eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement von Microsoft und Drittpartei Dienste. Dieses Produkt bietet viele Vorteile. So z.B. eine Multi-Faktor-Authentifizierung mittels Microsoft Authenticator.
 \paragraph{SAP Cloud Identity Access Governance}
 Das Unternehmen SAP bietet mit dem Produkt "SAP Cloud Identity Access Governenace" eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement. SAP selbst schreibt dem Produkt eine intuitive Bedienung, hohe Anpassbarkeit und skalierbare Funktionen zu.
+\paragraph{Okta Inc.}
+Das Unternehmen Okta Inc. ist ein in den USA ansässiges Unternehmen welches sich auf IAM spezialisiert hat. Mit rund 6000 Mitarbeitern und mehr als einer Milliarde US-Dollar an Umsatz ist es ein führender Hersteller von IAM Produkten. Vom Unternehmen werden 2 Produkte angeboten. Customer Identity Cloud und Workforce Identity Cloud. Customer Identity Cloud ist eine Lösung zum Customer Identity Management, d.h. es ermöglicht die sichere Verwaltung und Authentifizierung von Kunden-Identitäten. Workforce Identity Cloud ist eine Lösung zum Unternehmensinternen Identitätsmanagement.
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 \section{Betriebliches Identitäts- und Berechtigungsmanagement}
 \label{sec:betrieb}
