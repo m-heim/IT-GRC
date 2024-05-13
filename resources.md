@@ -25,6 +25,7 @@ INFORMATION SECURITY]
 - https://www.sciencedirect.com/science/article/pii/S2215098617316750#s0010 - [Identity and access management in cloud environment: Mechanisms and challenges]
 - https://pdf.sciencedirectassets.com/280203/1-s2.0-S1877050916X00038/1-s2.0-S1877050916002489/main.pdf - [Identity and Access Management as Security-as-a-Service from
 Clouds]
+- https://link.springer.com/chapter/10.1007/978-3-658-17987-8_7 - [Zugriffskontrolle über Authentifizierung]
 
 ## Standards
 - https://www.iso.org/standard/57914.html

@@ -28,18 +28,24 @@ Diese Seminararbeit soll dem Leser eine gute Grundlage dafür geben, sich mit de
 \label{sec:grundlagen}
 \subsection{Einordnung}
 \subsection{Identität}
-Um den Begriff Identitätsmanagement zu definieren sollte zuerst der Begriff der Identität definiert werden. In der Philosophie wird Identität über die Ununterscheidbarkeit von Dingen definiert. Nach dem Identitätsprinzip sind zwei Dinge genau dann identisch wenn sich zwischen ihnen keine Unterschiede finden lassen. Hierbei geht es um die Fragestellung "wer bist du?".
+Um den Begriff Identitätsmanagement zu definieren sollte zuerst der Begriff der Identität definiert werden. In der Philosophie wird Identität über die Ununterscheidbarkeit von Dingen definiert. Nach dem Identitätsprinzip sind zwei Dinge genau dann identisch wenn sich zwischen ihnen keine Unterschiede finden lassen. Hierbei geht es um die Fragestellung "wer bist du?". Im Kontext der IT wird dies durch Authentifizierungsverfahren umgesetzt. In der IT haben sich eine Vielzahl an Authentifizierungsverfahren durchgesetzt. Für einen kurzen Überblick sind einige Authentifizierungsverfahren im folgenden aufgelistet.
+\begin{itemize}
+  \item Passwörter und Pins sind die wohl bekanntesten Arten der Authentifizierung. Jedoch ist es auch eine der unsichersten Arten da diese gerne mehrfach verwendet werden oder geknackt werden können
+  \item Tokens sind eine andere Art der Authentifizierung die auf Besitz und Wissen basieren und daher sicherer sind wie rein wissensbasierte Verfahren. Hierbei wird ein Gerät verwendet welches nach Entsperrung mittels Pin/Passwort ein Einmalpasswort ausgibt oder automatisch die Authentifizierung freigibt
+  \item Eine weiteres Beispiel für Authentifizierung ist die Biometrie. Hierbei werden z.B. der Fingerabdruck, die Retina oder die Stimme einer Person verwendet um diese zu identifizieren
+\end{itemize}
+~\cite{tsolkas2017}
 \subsection{Identitätsmanagement}
 Identitätsmanagement beschreibt die Verwaltung von digitalen Identitäten. Hierbei werden Prozesse für die Provisonierung, Änderung und Deprovisionierung von digitalen Identitäten definiert und umgesetzt.~\cite{sharma2016identity}
 \subsection{Berechtigung}
-Berechtigungen beschreiben welche Identitäten auf welche Ressourcen zugreifen darf. Dieser Prozess findet nach der Feststellung der Identität statt. Hierbei geht es um die Fragestellung "was darf er/sie/es?".
+Berechtigungen oder auch Zugriffsberechtigungen beschreiben welche Identitäten auf welche Ressourcen zugreifen darf. Dieser Prozess findet nach der Authentifizierung statt. Hierbei geht es um die Fragestellung "was darf er/sie/es?". Die Kontrolle der Berechtigungen basierend auf einer Identität wird Zugriffskontrolle oder auch Autorisierung genannt.~\cite{tsolkas2017}
 \subsection{Berechtigungsmanagement}
 Berechtigungsmanagement ist verantwortlich für die Festlegung welche Nutzer/Entitäten auf welche Ressourcen Zugriff haben. Beispiele hierfür sind der Zugriff auf eine Datenbank, der Zugriff auf Dokumente oder der Konfiguration von Systemen. Das Ziel ist hierbei ist das Least-Privilege-Prinzip (PoLP) umzusetzen. Das Berechtigungsmanagement besteht aus verschiedenen Aspekten. So z.B. der Provisionierung von Rechten, der Compliance mit Standards und der konkreten technischen Umsetzung der Authorisierung.
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{assets/accessmanagement.png}
   \label{fig:accesscontrol}
-  \caption{Zugriffskontrolle}
+  \caption{Abstrakte Einordnung der Zugriffskontrolle [Basiert auf "Access Control: Principles and Practice von Ravi S. Sandhu and Pierangela Samarati"]}
 \end{figure}
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 Das Identitäts und Berechtigungsmanagement ist eine zentrale Disziplin im Kontext der IT-GRC. Die sorgfältige Umsetzung von Identitäts- und Berechtigungsmanagement hilft dabei IT-Sicherheits-Risiken zu minimieren und die Compliance von Standards zu gewährleisten.
@@ -94,4 +100,6 @@ Das Identitäts- und Berechtigungsmanagement fällt unter die Domäne der Inform
 \printbibliography
 \newpage
 \section{Quellenverzeichnis}
+\newpage
+\listoffigures
 \end{document}
