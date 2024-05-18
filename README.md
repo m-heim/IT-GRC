@@ -18,6 +18,7 @@ Clouds]
 - https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/pdf/identity_management_guide/red_hat_enterprise_linux-6-identity_management_guide-en-us.pdf - [Red Hat Enterprise Linux 6 Identity Management Guide]
 - https://media.defense.gov/2023/Mar/21/2003183448/-1/-1/0/ESF%20IDENTITY%20AND%20ACCESS%20MANAGEMENT%20RECOMMENDED%20BEST%20PRACTICES%20FOR%20ADMINISTRATORS%20PP-23-0248_508C.PDF - [Recommended best practices for administrators]
 - https://www.ijltet.org/journal/148587614339.1290.pdf - [IDENTITY AND ACCESS MANAGEMENT: CONCEPT, CHALLENGES, SOLUTIONS]
+- https://www.researchgate.net/profile/Ishaq-Azhar-Mohammed/publication/353889641_Economics_of_Identity_and_Access_Management_Providing_decision_support_for_investments/links/6116a7c11e95fe241acd5514/Economics-of-Identity-and-Access-Management-Providing-decision-support-for-investments.pdf - [Economics of IAM]
 
 ## Technical standards
 - https://www.iso.org/standard/57914.html
