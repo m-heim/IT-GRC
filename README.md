@@ -1,7 +1,11 @@
+# Project
+- This repository contains my work for the IT-GRC class in college. This involves a project paper about identity and access management. You can find this paper under `/seminararbeit/Thema_08_Heim_Maximilian_GRC-03_Seminararbeit.pdf`. Additionally this Readme contains the useful resources used for research on the topic, see #Resources
+
 # Resources
 
 ## General
 - https://en.wikipedia.org/wiki/Identity_management
+- https://elimity.com/blog/user-access-management-the-fundamentals
 
 ## IAM
 - https://reposit.haw-hamburg.de/bitstream/20.500.12738/8064/1/Leitfaden_Identity_Access_Management_dConta.pdf - [Leitfaden eines mandantenunabhängigen Identity Access Management]
@@ -19,9 +23,17 @@ Clouds]
 - https://media.defense.gov/2023/Mar/21/2003183448/-1/-1/0/ESF%20IDENTITY%20AND%20ACCESS%20MANAGEMENT%20RECOMMENDED%20BEST%20PRACTICES%20FOR%20ADMINISTRATORS%20PP-23-0248_508C.PDF - [Recommended best practices for administrators]
 - https://www.ijltet.org/journal/148587614339.1290.pdf - [IDENTITY AND ACCESS MANAGEMENT: CONCEPT, CHALLENGES, SOLUTIONS]
 - https://www.researchgate.net/profile/Ishaq-Azhar-Mohammed/publication/353889641_Economics_of_Identity_and_Access_Management_Providing_decision_support_for_investments/links/6116a7c11e95fe241acd5514/Economics-of-Identity-and-Access-Management-Providing-decision-support-for-investments.pdf - [Economics of IAM]
+- https://www.proquest.com/docview/2775799672?pq-origsite=gscholar&fromopenview=true&sourcetype=Scholarly%20Journals - [Identity and Access Management: High-level Conceptual Framework]
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5197377 - [Using Modelling and Simulation for Policy Decision Support in Identity Management]
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7086972 - [User Identity and Access Management Trends in IT Infrastructure- An Overview]
+- https://www.iaras.org/iaras/filedownloads/ijems/2022/007-0036(2022).pdf - [Customer Identity and Access Management (CIAM): An overview of the main technology vendors]
 
 ## Technical standards
+
+## ISO 27001
 - https://www.iso.org/standard/57914.html
+- https://iso-docs.com/blogs/iso-27001-standard/iso-27001-annex-a-9-access-control
+
 - https://www.itu.int/rec/T-REC-X.1252/en
 - https://cloudsecurityalliance.org/research/guidance - [CSA Guidance: IAM in DOMAIN 12]
   
@@ -54,6 +66,8 @@ Clouds]
 - https://dl.acm.org/doi/pdf/10.1145/234313.234412
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7042715
 - https://shazkhan.wordpress.com/wp-content/uploads/2010/10/access-control-systems.pdf
+- https://pdf.sciencedirectassets.com/271161/1-s2.0-S1386505606X00746/1-s2.0-S1386505605001747/main.pdf - [Modelling privilege management and access control]
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1206966 - [Organizations Access Control]
 
 # OpenID
 - https://www.sciencedirect.com/science/article/pii/S0167404818312781
