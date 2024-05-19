@@ -5,7 +5,10 @@
 
 ## General
 - https://en.wikipedia.org/wiki/Identity_management
+- https://www.ibm.com/topics/identity-access-management
 - https://elimity.com/blog/user-access-management-the-fundamentals
+- https://learn.microsoft.com/de-de/entra/fundamentals/introduction-identity-access-management
+- https://www.microsoft.com/de-de/security/business/security-101/what-is-identity-access-management-iam
 
 ## IAM
 - https://reposit.haw-hamburg.de/bitstream/20.500.12738/8064/1/Leitfaden_Identity_Access_Management_dConta.pdf - [Leitfaden eines mandantenunabhängigen Identity Access Management]
@@ -30,9 +33,12 @@ Clouds]
 
 ## Technical standards
 
-## ISO 27001
+### ISO 27001
 - https://www.iso.org/standard/57914.html
 - https://iso-docs.com/blogs/iso-27001-standard/iso-27001-annex-a-9-access-control
+
+### ISO 24760
+- https://fg-secmgt.gi.de/fileadmin/FG/SECMGT/2012/6_Rannenberg_framework_for_identity_management.pdf
 
 - https://www.itu.int/rec/T-REC-X.1252/en
 - https://cloudsecurityalliance.org/research/guidance - [CSA Guidance: IAM in DOMAIN 12]
