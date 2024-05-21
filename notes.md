@@ -5,5 +5,6 @@
 
 ## 14.05.2024
 - Buch ohne Zitationen als Quelle?
-- Unterscheidung ISO/IEC Standards und technische Standards
-- Wie Beschreibungen zu Produkten und Tools schreiben? Ohne Quellen?
+
+## 21.05.2024
+- Wieso unterscheidung wirtschaftliche Aspekte und betriebliche Motiviation? Gibt es Unterschiede? Wo strenge gesetzliche Vorgaben?

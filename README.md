@@ -12,7 +12,7 @@
 - https://github.com/kdeldycke/awesome-iam
 
 ## IAM
-- https://reposit.haw-hamburg.de/bitstream/20.500.12738/8064/1/Leitfaden_Identity_Access_Management_dConta.pdf - [Leitfaden eines mandantenunabhängigen Identity Access Management]
+- https://reposit.haw-hamburg.de/bitstream/20.500.12738/8064/1/Leitfaden_Identity_Access_Management_dConta.pdf - [Leitfaden eines mandantenunabhängigen Identity Access Management] - [Rechtliche Aspekte von IAM]
 - https://vsis-www.informatik.uni-hamburg.de/getDoc.php/thesis/130/identitaet.pdf - [Digitale Identität und Identitäts-Management]
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7380701 - [Identity and Access Management- A comprehensive
 Study]
@@ -64,12 +64,16 @@ Clouds]
 - https://www.solarwinds.com/de/access-rights-manager
 - https://www.pingidentity.com/de/solutions.html
 - https://www.cisco.com/site/us/en/products/security/identity-services-engine/index.html
+  
+### Okta
+- https://trust.okta.com/compliance/
 
 ## Books
 - https://books.google.de/books?hl=de&lr=&id=dpjsXA5SPPwC&oi=fnd&pg=PA1&dq=identity+and+access+management&ots=VMAXxn9h2B&sig=Z7PmIJw4Feaza7IMe6R-vnau528#v=onepage&q=identity%20and%20access%20management&f=false - [Access control systems]
 - https://link.springer.com/chapter/10.1007/978-3-658-17987-8_7 - [Identity- und Access-Management im Unternehmen]
 - https://books.google.de/books?hl=de&lr=&id=o8mHSbDHgPsC&oi=fnd&pg=PT5&dq=identity+management+architecture&ots=UUgsnhsH6o&sig=GbkoPZCwuK2cR2IjwlrxXUAooho&redir_esc=y#v=onepage&q=identity%20management%20architecture&f=false - [Digital Identity: Unmasking Identity Management Architecture (IMA)]
 - https://books.google.de/books?hl=de&lr=&id=UrmD-Gxt-8IC&oi=fnd&pg=PA5&dq=identity+management+audit&ots=jpMzBzW3tR&sig=r6dBZ8xZN5noybmJtNHNk0H9MWo&redir_esc=y#v=onepage&q=identity%20management%20audit&f=false - [Identity Management: Concepts, Technologies, and Systems]
+- https://books.google.de/books?hl=de&lr=&id=BHazecOuDLYC&oi=fnd&pg=PR7&dq=iam+compliance&ots=FC0bJ8pWGe&sig=6XNT5YyU66jKYr0W19SK6Q4drgg&redir_esc=y#v=onepage&q=iam%20compliance&f=false - [Cloud Security and Privacy: An Enterprise Perspective on Risks and Compliance] - [good description of iam management and iam lifecycle]
 
 ## IdM
 - https://ieeexplore.ieee.org/abstract/document/5689468 - [A Survey of Identity Management Technology]
