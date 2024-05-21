@@ -42,7 +42,7 @@ In der IT haben sich eine Vielzahl an Authentifizierungsverfahren durchgesetzt. 
 Identitätsmanagement ist die Verwaltung von digitalen Identitäten. Die Aufgaben im Bereich des Identitätsmanagements sind vielfältig. Beispiele für Aufgaben sind.
 \begin{itemize}
   \item Planung und Umsetzung einer passenden Identity Management Architektur~\cite{windley2005digital}
-  \item Management von Prozessen für die Provisonierung, Änderung und Deprovisionierung von digitalen Identitäten. Dies wird zusammengefasst als Identity Lifecycle Management bezeichnet~\cite{sharma2016identity}
+  \item Management von Prozessen für die Provisonierung, Änderung, Deprovisionierung, Auditierung von digitalen Identitäten. Dies wird zusammengefasst als Identity Lifecycle Management bezeichnet~\cite{sharma2016identity}
   \item Identifikation von Standards und Gesetzen welche eingehalten werden müssen, Einbringung dieser in den Identitätsmanagement Prozess~\cite{azhar2014economics}
   \item Auditieren des Identity Life Cycles und der Einhaltung von IT-GRC Vorgaben~\cite{peyton2007audit}~\cite{accorsi2008automated}
 \end{itemize}
@@ -73,8 +73,25 @@ Eine speziell für Identitätsmanagement erstellte Norm ist ISO/IEC 24760. Hierb
 \paragraph{NIST 800-53A}
 Das National Institute of Standards and Technology (NIST) publizierte die \glqq{}NIST Special Publication 800-53A - Assessing Security and Privacy Controls in Information Systems and Organizations\grqq{}. Dieses Dokument stellt Prozesse und Methoden für die Bewertung von Sicherheits- und Datenschutzmaßnahmen vor. Im Kapitel \glqq{}Security and Privacy Assessment Procedures\grqq{} wird im Unterkapitel 4.1 \glqq{}Access Control Family (AC)\grqq{} auf Zugangskontrolle und im Unterkapitel 4.7 \glqq{}Identification and Authentication Family (IA)\grqq{} auf Identifizierung und Authentifizierung eingegangen.
 \subsection{Methoden und Prozesse}
+\subsubsection{Identitäts Lebenszyklus}
+Ein zentraler Prozess welcher im Rahmen des IdM definiert und umgesetzt werden muss ist der Identitäts Lebenszyklus.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{assets/idlc.png}
+  \label{fig:idlc}
+  \caption{Identity Life Cycle - In Anlehnung an: Identity Management Concepts, Technologies, and Systems von Elisa Bertino und Kenji Takahashi}
+\end{figure}
+\paragraph{Geburt}
+\subparagraph{Festlegung und Überprüfung von Attributen}
+Der erste Schritt in der Geburt einer Identität ist die Sammlung relevanter Attribute wie Name, Geburtsdatum, Wohnsitz, Rolle im Unternehmen etc. und Überprüfung dieser.
+\subparagraph{Festlegen von Anmeldeinformationen}
+Um der Entität Zugriff auf die provisionierte Identität zu geben müssen Bezeichner (z.B. E-Mail Addressen oder Nutzernamen) und geeignete Verfahren zur Authentifikation festgelegt werden. So werden in diesem Schritt z.B. Einmalpasswörter für die initiale Anmeldung vergeben oder der Fingerabdruck der zu authentifizierenden Person gespeichert.
+\subparagraph{Abschließende Erstellung}
+Nachdem alle relevanten Informationen zur Erstellung der Identität gesammelt wurden kann die Identität erstellt werden und anschließend durch die
+\paragraph{User Provisioning}
+\paragraph{Audit}
 \subsection{Technologien und Tools}
-IAM Tools ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM. Im folgenden werden einige Technologien und Produkte vorgestellt welche bei der Umsetzung von Identitäts- und Berechtigungsmanagement verwendet werden.
+IAM Tools ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM. Im folgenden werden einige standartisierte Technologien und Produkte vorgestellt welche bei der Umsetzung von CIAM und IAM verwendet werden.
 \subsubsection{Standardisierte Technologien}
 \paragraph{SAML}
 SAML ist ein weit verbreiteter Standard zur Umsetzung von Sicherheits-Assertationen. Mit SAML wird ein XML Format definiert welches zur Authentifizierung und Authorisierung von Nutzern verwendet werden kann. Im Kontext von SAML werden verschiedene Begrifflichkeiten definiert.
@@ -103,6 +120,8 @@ Der Ablauf des Protokolls ist in Grafik~\cref{fig:oauth} abgebildet.~\cite{rfc67
 OpenID Connect (OIDC) ist ein Standard für federatedlößt die veraltete OpenID 2.0 Spezifikation ab. Es ist ein weit verbreiteter Standard von
 \url{https://www.openid.net/developers/libraries-for-obsolete-specifications/}
 \subsubsection{IAM Lösungen}
+\paragraph{Shibboleth}
+Shibboleth ist eine quelloffene Lösung zur Umsetzung von SSO. Shibboleth basiert auf SAML und setzt daher das Prinzip der Föderierten Identität mittels IdP und SP um. Die Technologie setzt sich aus 3 Software Paketen zusammen. IdP, SP und Embedded Discovery Service. Der Embedded Discovery Service erlaubt einem SP mehrere IdP's zur Verfügung zu stellen.
 \paragraph{IBM Security Verify}
 IBM bietet mit dem Produkt \glqq{}IBM Security Verify\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement an. Dieses Produkt bietet umfangreiche Funktionalitäten wie SSO, MFA, KI gestütze Risikobewertung von Zugriffen und Identitätsanalyse, d.h. die Analyse von Identitäten und Berechtigungen zum Zweck der Identifizierung von Abweichungen.
 \paragraph{Microsoft Entra ID}
@@ -126,16 +145,20 @@ SailPoint ist ein auf IAM spezialisiertes Unternehmen. Es werden verschiedenste 
 \label{sec:betrieb}
 \subsection{Überblick}
 \subsection{Organisatorische Aspekte}
-Das Identitäts- und Berechtigungsmanagement fällt unter die Domäne der Informationssicherheit, benötigt jedoch gegebenfalls umfangreiche IT Infrastruktur und Produkte. Auf der Führungsebene ist im Unternehmen sind daher der Chief Information Security Officer (CISO) und der Chief Information Officer (CIO) für die Umsetzung des Identitäts- und Berechtigungsmanagement verantwortlich.~\cite{azhar2014economics}\cite{baldwin2009using} Im Fall von umfangreichen Anforderungen an das System kann die Umsetzung des IAM ein ganzes Team benötigen.~\cite{mohammed2011identity}. Ein weiterer
+Im Rahmen der Ausarbeitung eines IAM Konzepts im Unternehmen müssen hierbei klare Verantwortlichkeiten, Prozesse und Technologien definiert werden.
+\paragraph{Führungebene}
+IAM fällt unter die Domäne der Informationssicherheit, benötigt jedoch gegebenfalls umfangreiche IT Infrastruktur und Produkte. Auf der Führungsebene ist im Unternehmen sind daher der Chief Information Security Officer (CISO) und der Chief Information Officer (CIO) für die Umsetzung des Identitäts- und Berechtigungsmanagement verantwortlich.~\cite{azhar2014economics}\cite{baldwin2009using} Im Fall von umfangreichen Anforderungen an das System kann die Umsetzung des IAM ein ganzes Team benötigen.~\cite{mohammed2011identity}
+\paragraph{Personalmanagement}
+Eine Zentrale Rolle in der Provisionierung und Änderung von Identitäten spielt das Personalmanagement. Dieses ist für die erstmalige Erstellung der Identitäten, der Ausgabe von Authentifizierungsinformationen, der Vergabe von Rollen für rollenbasierte Zugriffskontrolle und der Deprovisionierung bei Beurlaubung und Kündigung zuständig.
 \subsection{Technische Aspekte}
+Für die Umsetzung von Identitäts- und Berechtigungsmanagement im Betrieb bieten sich die Lösungen der namhaften Hersteller wie Microsoft, SAP, Oracle oder Okta an.
 \subsection{Wirtschaftliche Aspekte}
 Die wirtschaftliche Signifikanz von Identitäts- und Berechtigungsmanagement ist unumstreitbar. Es lassen sich 3 Aspekte identifizieren.
 \paragraph{Produktivität}
-Für die Mitarbeiter im Unternehmen stellt schlecht umgesetztes IAM eine Hürde dar. Wenn ein Mitarbeiter eine vielzahl an Passwörtern für die unternehmensinternen Dienste verwalten muss kann dies zur unsachgemäßen Handhabung führen, dies erhöht die Wahrscheinlichkeit von Sicherheit Risiken und verringert die Produktivität im Vergleich zu SSO mittels MFA.~\cite{azhar2014economics}
 \paragraph{Security}
-Der wirtschaftliche Schaden der durch nichteinhaltung von Gesetzen, Datendiebstahl und unautorisierter Kontrolle entstehen kann ist immens.~\cite{azhar2014economics}
+Der wirtschaftliche Schaden der durch nichteinhaltung von Gesetzen, Datendiebstahl und unautorisierter Kontrolle entstehen kann ist immens.~\cite{azhar2014economics} Wenn ein Mitarbeiter eine Vielzahl an Passwörtern für die unternehmensinternen Dienste verwalten muss kann dies zur unsachgemäßen Handhabung führen - so z.B. Notizen mit Passwörtern oder Verwendung von schwachen Passwörtern, dies erhöht die Wahrscheinlichkeit von Sicherheitrisiken. CITEME. Im Jahr 2017 fiel Deloitte einem Cyberangriff zum Opfer. Hierbei wurden Nutzernamen, Passwörter, IP Addressen und sensible Unternehmensinformationen von 244.000 Mitarbeitern und Kunden geklaut. Grund für den Cyberangriff war ein Administratoraccount ohne Zugriffsbeschränkungen welcher nur mittels Passwort, ohne MFA geschützt war.~\cite{deloitte2017} Mittels fest definierter Prozesse des Identity Management Life Cycles und Audit dieses können Risiken für ähnliche Angriffe minimiert werden.
 \paragraph{Kundenerlebnis}
-Im Kontext des Customer IAM führen ungeeignete IAM Lösungen zu erhöhter Komplexität für den Nutzer. Eine Folge hiervon ist dass Kunden möglicherweise schwache Passwörter verwenden oder auf mehreren Plattformen das gleiche Passwort verwenden, dies kann zur kompromittierung von Kundenkonten führen. Im Kontrast kann die strikte Umsetzung von starken Passwörtern oder die Nutzung einer weiteren MFA-App für den Kunden abschreckend sein. Somit steigt der Kunde möglicherweise zur Konkurrenz um.~\cite{azhar2014economics}
+Im Kontext des Customer IAM führen ungeeignete IAM Lösungen zu erhöhter Komplexität für den Nutzer. Eine strikte Umsetzung von starken Passwörtern oder die Nutzung einer weiteren MFA-App kann für den Kunden abschreckend sein. Somit steigt der Kunde möglicherweise zur Konkurrenz um.~\cite{azhar2014economics} Durch das Anbieten von SSO mittels externer Dienste lässt sich die Komplexität und das Risiko von Sicherheitsproblemen reduzieren.
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 \section{Fazit}
 \subsection{Zusammenfassung}
