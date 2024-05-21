@@ -9,6 +9,7 @@
 - https://elimity.com/blog/user-access-management-the-fundamentals
 - https://learn.microsoft.com/de-de/entra/fundamentals/introduction-identity-access-management
 - https://www.microsoft.com/de-de/security/business/security-101/what-is-identity-access-management-iam
+- https://github.com/kdeldycke/awesome-iam
 
 ## IAM
 - https://reposit.haw-hamburg.de/bitstream/20.500.12738/8064/1/Leitfaden_Identity_Access_Management_dConta.pdf - [Leitfaden eines mandantenunabhängigen Identity Access Management]
@@ -30,6 +31,12 @@ Clouds]
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5197377 - [Using Modelling and Simulation for Policy Decision Support in Identity Management]
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7086972 - [User Identity and Access Management Trends in IT Infrastructure- An Overview]
 - https://www.iaras.org/iaras/filedownloads/ijems/2022/007-0036(2022).pdf - [Customer Identity and Access Management (CIAM): An overview of the main technology vendors]
+- https://www.theseus.fi/bitstream/handle/10024/505780/Anand_Niharika.pdf?sequence=2&isAllowed=y - [Role of IAM in an Organization]
+- https://link.springer.com/article/10.1007/s11623-006-0139-9 - [Digitale Identitäten - Überblick und aktuelle Trends]
+- https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1691&context=amcis2009 - [Information Security in an Identity Management Lifecycle: Mitigating Identity CrimesMitigating Identit]
+- http://www.cpd.iit.edu/netsecure08/KEVIN_WANG.pdf - [Identity and Access Management, non scientific presentation]
+- https://epub.uni-regensburg.de/33180/7/ICISS_44_FINAL_CAMERA_READY.pdf - [Introducing Dynamic Identity and Access Management in Organizations]
+- https://www.digitale-technologien.de/DT/Redaktion/DE/Downloads/Publikation/2018_10_18_Smart_Data_Identit%C3%A4tsmanagement.pdf?__blob=publicationFile&v=2 - [Identitätsmanagement Fachgruppen „Wirtschaftliche Potenziale und gesellschaftliche Akzeptanz“ und „Sicherheit“]
 
 ## Technical standards
 
@@ -62,7 +69,7 @@ Clouds]
 - https://books.google.de/books?hl=de&lr=&id=dpjsXA5SPPwC&oi=fnd&pg=PA1&dq=identity+and+access+management&ots=VMAXxn9h2B&sig=Z7PmIJw4Feaza7IMe6R-vnau528#v=onepage&q=identity%20and%20access%20management&f=false - [Access control systems]
 - https://link.springer.com/chapter/10.1007/978-3-658-17987-8_7 - [Identity- und Access-Management im Unternehmen]
 - https://books.google.de/books?hl=de&lr=&id=o8mHSbDHgPsC&oi=fnd&pg=PT5&dq=identity+management+architecture&ots=UUgsnhsH6o&sig=GbkoPZCwuK2cR2IjwlrxXUAooho&redir_esc=y#v=onepage&q=identity%20management%20architecture&f=false - [Digital Identity: Unmasking Identity Management Architecture (IMA)]
-- https://books.google.de/books?hl=de&lr=&id=UrmD-Gxt-8IC&oi=fnd&pg=PA5&dq=identity+management+audit&ots=jpMzBzW3tR&sig=r6dBZ8xZN5noybmJtNHNk0H9MWo&redir_esc=y#v=onepage&q=identity%20management%20audit&f=false - [Identity Management]
+- https://books.google.de/books?hl=de&lr=&id=UrmD-Gxt-8IC&oi=fnd&pg=PA5&dq=identity+management+audit&ots=jpMzBzW3tR&sig=r6dBZ8xZN5noybmJtNHNk0H9MWo&redir_esc=y#v=onepage&q=identity%20management%20audit&f=false - [Identity Management: Concepts, Technologies, and Systems]
 
 ## IdM
 - https://ieeexplore.ieee.org/abstract/document/5689468 - [A Survey of Identity Management Technology]
