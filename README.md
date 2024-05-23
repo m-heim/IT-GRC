@@ -37,6 +37,8 @@ Clouds]
 - http://www.cpd.iit.edu/netsecure08/KEVIN_WANG.pdf - [Identity and Access Management, non scientific presentation]
 - https://epub.uni-regensburg.de/33180/7/ICISS_44_FINAL_CAMERA_READY.pdf - [Introducing Dynamic Identity and Access Management in Organizations]
 - https://www.digitale-technologien.de/DT/Redaktion/DE/Downloads/Publikation/2018_10_18_Smart_Data_Identit%C3%A4tsmanagement.pdf?__blob=publicationFile&v=2 - [Identitätsmanagement Fachgruppen „Wirtschaftliche Potenziale und gesellschaftliche Akzeptanz“ und „Sicherheit“]
+- https://epub.uni-regensburg.de/32143/1/SHCIS_MK.pdf - [Towards an Economic Approach to Identity and Access Management Systems Using Decision Theory]
+- https://www.researchgate.net/profile/Marco-Spruit/publication/294510961_Selecting_and_Implementing_Identity_and_Access_Management_Technologies_The_IAM_Services_Assessment_Model/links/56dfe54608ae9b93f79aeaa4/Selecting-and-Implementing-Identity-and-Access-Management-Technologies-The-IAM-Services-Assessment-Model.pdf - [Selecting and implementing Identity and Access Management technologies: The IAM Services Assessment Model]
 
 ## Technical standards
 
@@ -57,9 +59,6 @@ Clouds]
 - https://www.cio.bund.de/Webs/CIO/DE/digitale-loesungen/it-konsolidierung/dienstekonsolidierung/it-massnahmen/iam/iam-node.html - [IAM als IT-Maßnahme]
 
 ## Products
-- https://rz10.de/sap-berechtigungen/sap-identity-management/iam-tools-sap-vergleich/
-- https://www.csoonline.com/de/a/die-9-besten-iam-tools,3673918
-- https://www.guru99.com/de/best-identity-access-management-tools.html
 - https://www.sap.com/germany/products/financial-management/cloud-iam.html
 - https://www.solarwinds.com/de/access-rights-manager
 - https://www.pingidentity.com/de/solutions.html
@@ -86,5 +85,10 @@ Clouds]
 - https://pdf.sciencedirectassets.com/271161/1-s2.0-S1386505606X00746/1-s2.0-S1386505605001747/main.pdf - [Modelling privilege management and access control]
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1206966 - [Organizations Access Control]
 
-# OpenID
+## Technical standards
+- https://www.okta.com/identity-101/whats-the-difference-between-oauth-openid-connect-and-saml/ - [What’s the Difference Between OAuth, OpenID Connect, and SAML?]
+### OpenID
 - https://www.sciencedirect.com/science/article/pii/S0167404818312781
+
+## SSO
+- https://www.sciencedirect.com/science/article/pii/S2212017312002988 - [A Survey on Single Sing-On Techniques]
