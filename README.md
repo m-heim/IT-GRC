@@ -41,6 +41,13 @@ Clouds]
 - https://www.researchgate.net/profile/Marco-Spruit/publication/294510961_Selecting_and_Implementing_Identity_and_Access_Management_Technologies_The_IAM_Services_Assessment_Model/links/56dfe54608ae9b93f79aeaa4/Selecting-and-Implementing-Identity-and-Access-Management-Technologies-The-IAM-Services-Assessment-Model.pdf - [Selecting and implementing Identity and Access Management technologies: The IAM Services Assessment Model]
 - https://books.google.de/books?hl=de&lr=&id=rAjoyoTv6qcC&oi=fnd&pg=PR1&dq=digital+identity+iam&ots=oKszgw31h6&sig=Qk_nSyB6S-x0Y1qm_QAX6onp3pQ&redir_esc=y#v=onepage&q=digital%20identity%20iam&f=false - [Digital Identity and Access Management: Technologies and Frameworks]
 - https://www.ej-eng.org/index.php/ejeng/article/view/3074/1425 - [IAM Identity Access Management—Importancein Maintaining Security Systems withinOrganizations]
+- https://www.researchgate.net/profile/Ishaq-Azhar-Mohammed/publication/353889576_Intelligent_authentication_for_identity_and_access_management_a_review_paper/links/6116a8b51ca20f6f861e4afd/Intelligent-authentication-for-identity-and-access-management-a-review-paper.pdf - [Intelligent authentication for identity and access management: a review paper]
+- https://www.sciencedirect.com/science/article/pii/S2215098617316750 - [Identity and access management in cloud environment: Mechanisms and challenges]
+- https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=7cedc9204cc2eec7a891996cd88eae9da87d7fe5 - [Identity & Access Management Get in control: IT Governance, people, permission and technical challenges.]
+- https://aisel.aisnet.org/cgi/viewcontent.cgi?article=3493&context=cais
+
+## Economics of IAM
+- https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b556abe34f19d5df5ce551ce023ffecda6f76429 - [Economics of Identity and Access Management: a Case Study on Enterprise Business Services]
 ## Technical standards
 
 ### ISO 27001
@@ -64,9 +71,11 @@ Clouds]
 - https://www.solarwinds.com/de/access-rights-manager
 - https://www.pingidentity.com/de/solutions.html
 - https://www.cisco.com/site/us/en/products/security/identity-services-engine/index.html
+- https://azure.microsoft.com/files/leadership-compass.pdf
   
 ### Okta
 - https://trust.okta.com/compliance/
+- https://www.okta.com/sites/default/files/2023-04/Workforce-Identity-Cloud-Security-Privacy.pdf
 
 ## Books
 - https://books.google.de/books?hl=de&lr=&id=dpjsXA5SPPwC&oi=fnd&pg=PA1&dq=identity+and+access+management&ots=VMAXxn9h2B&sig=Z7PmIJw4Feaza7IMe6R-vnau528#v=onepage&q=identity%20and%20access%20management&f=false - [Access control systems]
