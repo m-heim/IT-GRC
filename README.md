@@ -40,11 +40,15 @@ Clouds]
 - https://epub.uni-regensburg.de/32143/1/SHCIS_MK.pdf - [Towards an Economic Approach to Identity and Access Management Systems Using Decision Theory]
 - https://www.researchgate.net/profile/Marco-Spruit/publication/294510961_Selecting_and_Implementing_Identity_and_Access_Management_Technologies_The_IAM_Services_Assessment_Model/links/56dfe54608ae9b93f79aeaa4/Selecting-and-Implementing-Identity-and-Access-Management-Technologies-The-IAM-Services-Assessment-Model.pdf - [Selecting and implementing Identity and Access Management technologies: The IAM Services Assessment Model]
 - https://books.google.de/books?hl=de&lr=&id=rAjoyoTv6qcC&oi=fnd&pg=PR1&dq=digital+identity+iam&ots=oKszgw31h6&sig=Qk_nSyB6S-x0Y1qm_QAX6onp3pQ&redir_esc=y#v=onepage&q=digital%20identity%20iam&f=false - [Digital Identity and Access Management: Technologies and Frameworks]
-- https://www.ej-eng.org/index.php/ejeng/article/view/3074/1425 - [IAM Identity Access Management—Importancein Maintaining Security Systems withinOrganizations]
+- https://www.ej-eng.org/index.php/ejeng/article/view/3074/1425 - [IAM Identity Access Management—Importancein Maintaining Security Systems withinOrganizations] - [Diagram, Organzation, Definitions]
 - https://www.researchgate.net/profile/Ishaq-Azhar-Mohammed/publication/353889576_Intelligent_authentication_for_identity_and_access_management_a_review_paper/links/6116a8b51ca20f6f861e4afd/Intelligent-authentication-for-identity-and-access-management-a-review-paper.pdf - [Intelligent authentication for identity and access management: a review paper]
 - https://www.sciencedirect.com/science/article/pii/S2215098617316750 - [Identity and access management in cloud environment: Mechanisms and challenges]
 - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=7cedc9204cc2eec7a891996cd88eae9da87d7fe5 - [Identity & Access Management Get in control: IT Governance, people, permission and technical challenges.]
 - https://aisel.aisnet.org/cgi/viewcontent.cgi?article=3493&context=cais
+- https://www.semanticscholar.org/paper/Optimizing-Identity-and-Access-Management-(-IAM-)-Al-Khouri/33646f2c2013a9740a34f3de8cf2208e0f87bf68 - [Optimizing Identity and Access Management ( IAM ) Frameworks]
+- https://pdf.sciencedirectassets.com/305941/1-s2.0-S2215098618X00068/1-s2.0-S2215098617316750/main.pdf - [Identity and access management in cloud environment: Mechanisms and challenges]
+- https://dspace.bracu.ac.bd/xmlui/bitstream/handle/10361/17566/22141060%2c%2022141064%2c%2022141049_CSE.pdf?sequence=1&isAllowed=y - [A Multi-Layer Security System for Data Access Control, Authentication, and Authorization] - [Definitions, IDaaS]
+- https://www.proquest.com/docview/2775799672?pq-origsite=gscholar&fromopenview=true&sourcetype=Scholarly%20Journals - [Identity and Access Management: High-level Conceptual Framework] - [Concept, Definitions, Framework]
 
 ## Economics of IAM
 - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b556abe34f19d5df5ce551ce023ffecda6f76429 - [Economics of Identity and Access Management: a Case Study on Enterprise Business Services]
@@ -72,6 +76,7 @@ Clouds]
 - https://www.pingidentity.com/de/solutions.html
 - https://www.cisco.com/site/us/en/products/security/identity-services-engine/index.html
 - https://azure.microsoft.com/files/leadership-compass.pdf
+- https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=30439b6e5dd36d390a7f2e78b7812a1d39d066ce - [Identity Management Systems A Comparison of Current Solutions]
   
 ### Okta
 - https://trust.okta.com/compliance/
@@ -85,7 +90,7 @@ Clouds]
 - https://books.google.de/books?hl=de&lr=&id=BHazecOuDLYC&oi=fnd&pg=PR7&dq=iam+compliance&ots=FC0bJ8pWGe&sig=6XNT5YyU66jKYr0W19SK6Q4drgg&redir_esc=y#v=onepage&q=iam%20compliance&f=false - [Cloud Security and Privacy: An Enterprise Perspective on Risks and Compliance] - [good description of iam management and iam lifecycle]
 
 ## IdM
-- https://ieeexplore.ieee.org/abstract/document/5689468 - [A Survey of Identity Management Technology]
+- https://ieeexplore.ieee.org/abstract/document/5689468 - [A Survey of Identity Management Technology] - [Definitions, models, paradigms]
 - https://docs.evolveum.com/book/practical-identity-management-with-midpoint.pdf - [Practical Identity Managent with Midpoint]
   
 ## Berechtigung
@@ -102,3 +107,6 @@ Clouds]
 
 ## SSO
 - https://www.sciencedirect.com/science/article/pii/S2212017312002988 - [A Survey on Single Sing-On Techniques]
+
+## CIAM
+- https://www.iaras.org/iaras/filedownloads/ijems/2022/007-0036(2022).pdf - [Customer Identity and Access Management (CIAM): An overview of the main technology vendors]
