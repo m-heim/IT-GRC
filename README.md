@@ -11,6 +11,9 @@
 - https://www.microsoft.com/de-de/security/business/security-101/what-is-identity-access-management-iam
 - https://github.com/kdeldycke/awesome-iam
 
+## General papers
+- https://www.researchgate.net/profile/U-Hariharan/publication/342215946_Safety_measures_for_EHR_systems/links/626a208105d79a3968a769c4/Safety-measures-for-EHR-systems.pdf#page=84 - [Identity and access management systems]
+
 ## IAM
 - https://reposit.haw-hamburg.de/bitstream/20.500.12738/8064/1/Leitfaden_Identity_Access_Management_dConta.pdf - [Leitfaden eines mandantenunabhängigen Identity Access Management] - [Rechtliche Aspekte von IAM]
 - https://vsis-www.informatik.uni-hamburg.de/getDoc.php/thesis/130/identitaet.pdf - [Digitale Identität und Identitäts-Management]
@@ -102,6 +105,7 @@ Clouds]
 
 ## Technical standards
 - https://www.okta.com/identity-101/whats-the-difference-between-oauth-openid-connect-and-saml/ - [What’s the Difference Between OAuth, OpenID Connect, and SAML?]
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7998280 - [SAML, OAuth, OIDC]
 ### OpenID
 - https://www.sciencedirect.com/science/article/pii/S0167404818312781
 
