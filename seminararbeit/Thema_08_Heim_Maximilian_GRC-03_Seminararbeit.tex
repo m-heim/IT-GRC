@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage[ngerman]{babel}
 \usepackage{float}
 \usepackage{graphicx}
@@ -45,7 +45,7 @@ Um den Begriff Identitätsmanagement zu definieren sollte zuerst der Begriff der
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/identity.png}
-  \caption{Digitale Identität - In Anlehnung an Grafik 2.1 aus Identity Management Concepts, Technologies, and Systems von Elisa Bertino und Kenji Takahashi}\label{fig:identity}
+  \caption{Digitale Identität - Basierend auf Grafik 2.1 aus Identity Management Concepts, Technologies, and Systems von Elisa Bertino und Kenji Takahashi}\label{fig:identity}
 \end{figure}
 In der Informationstechnik wird der Beweis über die eigene Identität, basierend auf Bezeichner und Zugangsdaten als Authentifizierung bezeichnet. Es haben sich verschiedenste Authentifizierungsverfahren durchgesetzt von denen im Folgenden einige vorgestellt werden. (vgl. \cite{tsolkas2017} Kapitel 7: Zugriffskontrolle über Authentifizierung)
 \paragraph{Authentifizierungsverfahren}
@@ -80,13 +80,13 @@ Die systematische Unterteilung von Identitäts- und Berechtigungsmanagement erwe
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/accessmanagement2.png}
-  \caption{Illustration der Zugriffssteuerung im Rahmen eines IAM Systems - In Anlehnung an \cite{ghaffari2022identity} Abbildung 1}\label{figure:iam}
+  \caption{Illustration der Zugriffssteuerung im Rahmen eines IAM Systems - Basierend auf Grafik 1 aus Identity and access management using distributed ledger technology: A survey von Fariba Ghaffari, Komal Gilani, Emmanuel Bertin und Noel Crespi}\label{figure:iam}
 \end{figure}
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 % fertig
 \begin{itemize}
   \item Die Nutzung von Identitäts- und Berechtigungsmanagement spielt eine zentrale Rolle im unternehmensweiten Risikomanagement. Durch die Steuerung welche logischen Identitäten auf welche Ressourcen zugreifen kann können eine Vielzahl an beabsichtigter und unbeabsichtigter Sicherheitsrisiken minimiert werden.
-  \item Das Identitäts- und Berechtigungsmanagement ist ein tiefgreifendes Thema in der IT-Governance und besteht aus verschiedenen Prozessen, Technologien und Gesetzen welche im Kontext der ganzen Unternehmenstätigkeiten betrachtet werden müssen.
+  \item Das Identitäts- und Berechtigungsmanagement ist ein tiefgreifendes Thema in der IT-Governance und besteht aus verschiedenen Prozessen, Technologien und Gesetzen welche im Kontext der gesamten Unternehmenstätigkeiten betrachtet werden müssen.
 \end{itemize}
 \section{Methoden, Technologien und Tools}
 \label{sec:existing}
@@ -99,40 +99,43 @@ Das Bundesamt für Sicherheit der Informationstechnik (BSI) definiert den IT-Gru
 %fertig
 ISO 27001 definiert mit Anhang A.9 Kontrollen für die Zugangskontrolle. Das Kapitel ist in die Unterkapitel \glqq{}9.1 Geschäftsanforderungen an die Zugangssteuerung\grqq{}, \glqq{}9.2 Benutzerzugangsverwaltung\grqq{}, \glqq{}9.3 Benutzerverantwortlichkeiten\grqq{} und \glqq{}9.4 Zugangssteuerung für Systeme und Anwendungen\grqq{} unterteilt. (vgl. \cite{kersten2020iso27001} Seite 121-138) Die Maßnahmen des oben erwähnten IT-Grundschutz-Kompendiums eignen sich zur Umsetzung der ISO 27001 Kontrollen. Somit kann eine ISO 27001 Zertifizierung auf Basis vom IT-Grundschutz umgesetzt werden. (vgl. \cite{bsi2023iso27001basis}) Eine Gegenüberstellung des Anhangs A.9 zu den Prozessbausteinen lässt sich im Dokument \glqq{}Zuordnungstabelle: Zuordnung ISO/IEC 27001 zum IT-Grundschutz\grqq{} finden. (vgl. \cite{bsi2021map})
 \paragraph{ISO/IEC 24760}
-Eine speziell für Identitätsmanagement erstellte Norm ist ISO/IEC 24760. Hierbei werden Konzepte und operative Strukturen zur korrekten Umsetzung von Identitätsmanagement definiert.~\cite{isoiec24760}
+%fertig
+Eine speziell für Identitätsmanagement erstellte Norm ist die ISO/IEC 24760. Hierbei werden Konzepte und operative Strukturen zur Umsetzung von Identitätsmanagement definiert. Die Norm geht hierbei auf die Provisionierung, Administration und Nutzung von digitalen Identitäten ein, die digitalen Identitäten sind im Kontext der Norm nicht nur Personen sondern auch Organisationen oder IT-Systeme. (vgl. \cite{iso2019idm} \glqq{}Introduction \grqq{})
 \paragraph{NIST 800-53A}
-Das National Institute of Standards and Technology (NIST) publizierte die \glqq{}NIST Special Publication 800-53A - Assessing Security and Privacy Controls in Information Systems and Organizations\grqq{}. Dieses Dokument stellt Prozesse und Methoden für die Bewertung von Sicherheits- und Datenschutzmaßnahmen vor. Im Kapitel \glqq{}Security and Privacy Assessment Procedures\grqq{} wird im Unterkapitel 4.1 \glqq{}Access Control Family (AC)\grqq{} auf Zugangskontrolle und im Unterkapitel 4.7 \glqq{}Identification and Authentication Family (IA)\grqq{} auf Identifizierung und Authentifizierung eingegangen.
+%fertig
+Das National Institute of Standards and Technology (NIST) publizierte die \glqq{}NIST Special Publication 800-53A - Assessing Security and Privacy Controls in Information Systems and Organizations\grqq{}. Dieses Dokument stellt Prozesse und Methoden für die Bewertung von Sicherheits- und Datenschutzmaßnahmen vor. Im Kapitel \glqq{}Security and Privacy Assessment Procedures\grqq{} wird im Unterkapitel 4.1 \glqq{}Access Control Family (AC)\grqq{} auf Zugangskontrolle und im Unterkapitel 4.7 \glqq{}Identification and Authentication Family (IA)\grqq{} auf Identifizierung und Authentifizierung eingegangen. (vgl. \cite{nist202280053a})
 \subsection{Methoden und Prozesse}
 \subsubsection{Identitäts Lebenszyklus}
-Ein zentraler Prozess welcher im Rahmen des Identitätsmanagements definiert und umgesetzt werden muss ist der Identitäts Lebenszyklus. Dieser enthält die grundlegenden Elemente Geburt, Leben, Änderung, Tod und Governance. Der Prozess ist in \cref{fig:idlc} dargestellt und wird nachfolgend genauer beschrieben.~\cite{bertino2010identity}
+%fertig
+Ein zentraler Prozess welcher im Rahmen des Identitätsmanagements definiert und umgesetzt werden muss ist der Identitäts Lebenszyklus. Dieser enthält die grundlegenden Elemente Geburt, Leben, Änderung, Tod und Governance. Der Prozess ist in \cref{fig:idlc} dargestellt und wird nachfolgend genauer beschrieben. (vgl. \cite{bertino2010identity} Seite 29-37)
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{assets/idlc.png}
-  \caption{Identity Life Cycle - In Anlehnung an Identity Management Concepts, Technologies, and Systems von Elisa Bertino und Kenji Takahashi}\label{fig:idlc}
+  \caption{Identity Life Cycle - Basierend auf Grafik 2.3 aus Identity Management Concepts, Technologies, and Systems von Elisa Bertino und Kenji Takahashi}\label{fig:idlc}
 \end{figure}
 \paragraph{Geburt}
 \subparagraph{Festlegung und Überprüfung von Attributen}
-Der erste Schritt in der Geburt einer Identität ist die Sammlung relevanter Attribute wie Name, Geburtsdatum, Wohnsitz, Rolle im Unternehmen etc. und Überprüfung dieser.~\cite{bertino2010identity}
+Der erste Schritt in der Geburt einer Identität ist die Sammlung relevanter Attribute wie Name, Geburtsdatum, Wohnsitz, Rolle im Unternehmen etc. und Überprüfung dieser.
 \subparagraph{Festlegen von Anmeldeinformationen}
-Um dem Subjekt Zugriff auf die provisionierte Identität zu geben müssen Bezeichner (z.B. E-Mail Addressen oder Nutzernamen) und geeignete Verfahren zur Authentifikation festgelegt werden. So werden in diesem Schritt z.B. Einmalpasswörter für die initiale Anmeldung vergeben oder der Fingerabdruck der zu authentifizierenden Person gespeichert.~\cite{bertino2010identity}
+Um dem Subjekt Zugriff auf die provisionierte Identität zu geben müssen Bezeichner (z.B. E-Mail Addressen oder Nutzernamen) und geeignete Verfahren zur Authentifikation festgelegt werden. So werden in diesem Schritt z.B. Einmalpasswörter für die initiale Anmeldung vergeben oder der Fingerabdruck der zu authentifizierenden Person gespeichert.
 \subparagraph{Abschließende Erstellung}
-Nachdem alle relevanten Informationen zur Erstellung der Identität gesammelt wurden kann die Identität erstellt werden.~\cite{bertino2010identity}
+Nachdem alle relevanten Informationen zur Erstellung der Identität gesammelt wurden kann die Identität erstellt werden.
 \paragraph{Leben}
 \subparagraph{Authentifizierung}
-Die Authentifizierung der eignenen Identität ermöglicht die gesicherte Nutzung von Ressourcen.~\cite{bertino2010identity}
-\subparagraph{Weitergabe von Informationen}
-Verfahren zur Weitergabe von Informationen sind ein zentraler Aspekt beim Ausleben einer digitalen Identität.~\cite{bertino2010identity}
+Die Authentifizierung der eignenen Identität ermöglicht die gesicherte Nutzung von Ressourcen.
+\subparagraph{Weitergabe von Identitätsinformationen}
+Verfahren zur Weitergabe von Informationen sind ein zentraler Aspekt beim Ausleben einer digitalen Identität.
 \paragraph{Aktualisierung}
 \subparagraph{Änderungen}
-Bei Änderung von Attributen wie z.B. Rollen im Unternehmen, Wohnort oder Namensänderung müssen die Attribute schnellstmöglich aktualisiert werden um die Integrität dieser zu gewährleisten. Zugangsdaten wie neu ausgestellte Zertifikate oder geänderte Passwörter müssen ebenso aktualisiert werden um die Authentifizierung zu gewährleisten.~\cite{bertino2010identity}
+Bei Änderung von Attributen wie z.B. Rollen im Unternehmen, Wohnort oder Namensänderung müssen die Attribute schnellstmöglich aktualisiert werden um die Integrität dieser zu gewährleisten. Zugangsdaten wie neu ausgestellte Zertifikate oder geänderte Passwörter müssen ebenso aktualisiert werden um die Authentifizierung zu gewährleisten.
 \paragraph{Tod}
 \subparagraph{Entzug von Zugangsrechten}
-Bei der Kündigung oder Beurlaubung von Mitarbeitern oder bei der Dekommisionierung von Systemen muss der Zugriff auf Ressourcen aufgehoben werden um Sicherheitsrisiken zu verhindern. In diesem Szenario ist es jedoch auch wichtig die Identitätsinformationen weiterhin zu persistieren um für zukünftige Untersuchungen wie z.B. des Audit-Trails eine Zuordnung zu haben.~\cite{bertino2010identity}
+Bei der Kündigung oder Beurlaubung von Mitarbeitern oder bei der Dekommisionierung von Systemen muss der Zugriff auf Ressourcen aufgehoben werden um Sicherheitsrisiken zu verhindern. In diesem Szenario ist es jedoch auch wichtig die Identitätsinformationen weiterhin zu persistieren um für zukünftige Untersuchungen wie z.B. des Audit-Trails eine Zuordnung zu haben.
 \paragraph{Governance}
 \subparagraph{Richtlinien}
-Die Administration, Nutzung und Weitergabe von Identitätsinformationen muss klar durch Richtlinien definiert sein.~\cite{bertino2010identity}
+Die Administration, Nutzung und Weitergabe von Identitätsinformationen muss klar durch Richtlinien definiert sein.
 \subparagraph{Audit Trail}
-Jegliche Transaktionen bezüglich Zugriff, Änderung oder Weitergabe von Identitätsinformationen sollten aufgezeichnet werden um die Rückverfolgbarkeit zu gewährleisten.~\cite{bertino2010identity}
+Jegliche Transaktionen bezüglich Zugriff, Änderung oder Weitergabe von Identitätsinformationen sollten aufgezeichnet werden um die Rückverfolgbarkeit zu gewährleisten.
 \subsection{Technologien und Tools}
 IAM Tools ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM. So gibt es einige standarisierte Technologien die bei der Implementierung von Identitäts- und Berechtigungsmanagement angewendet werden können. Zur konkreten Umsetzung in Organisationen gibt einige quelloffene Lösungen und von den großen Technologiekonzernen wie Microsoft, SAP, IBM, Oracle werden kommerzielle Lösungen angeboten. Im Folgenden werden einige standartisierte Technologien und Produkte vorgestellt welche bei der Umsetzung von CIAM und IAM verwendet werden.
 \subsubsection{Standardisierte Technologien}
@@ -161,9 +164,11 @@ Der Ablauf des Protokolls ist in Grafik~\cref{fig:oauth} abgebildet.~\cite{rfc67
 OpenID Connect (OIDC) ist ein auf OAuth 2.0 basierender Standard für föderierte Authentifizierung welches die veraltete OpenID 2.0 Spezifikation ablößt. Somit kann im Rahmen des Identitätsmanagements ein zentraler OpenID Provider (OP) über ein REST API zur Authentifizierung und SSO eingesetzt werden.~\cite{naik2017choice}
 \subsubsection{IAM Lösungen}
 \paragraph{Shibboleth}
-Shibboleth ist eine quelloffene Lösung zur Umsetzung von SSO. Shibboleth basiert auf SAML und setzt daher das Prinzip der Föderierten Identität mittels IdP und SP um. Die Technologie setzt sich aus 3 Software Paketen zusammen. IdP, SP und Embedded Discovery Service. Der Embedded Discovery Service erlaubt einem SP mehrere IdP's zur Verfügung zu stellen.
+%fertig
+Shibboleth ist eine auf SAML basierende, quelloffene Lösung zur Umsetzung von föderierter Identität. Shibboleth kann in diesem Kontext als Identity Provider und Service Provider verwendet werden. Somit kann eine SSO Integration von verschiedensten Anwendungen realisiert werden. (vgl. \cite{kamal2015shibboleth} Kapitel 5) Die Technologie setzt sich aus 4 Software Paketen zusammen. Die Softwarepakete sind hierbei der Identity Provider, Service Provider, Embedded Discovery Service und der Metadata Aggregator. Der Embedded Discovery Service erlaubt einem SP mehrere IdP's zur Verfügung zu stellen. Der Metadata Aggregator erlaubt die dynamische Abfrage von Metadaten vom Identity Provider (vgl. \cite{shibboleth2024software})
 \paragraph{IBM Security Verify}
-IBM bietet mit dem Produkt \glqq{}IBM Security Verify\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement an. Dieses Produkt bietet umfangreiche Funktionalitäten wie SSO, MFA, KI gestütze Risikobewertung von Zugriffen und Identitätsanalyse, d.h. die Analyse von Identitäten und Berechtigungen zum Zweck der Identifizierung von Abweichungen.
+%fertig
+IBM bietet mit dem Produkt \glqq{}IBM Security Verify\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement und Customer Identitäts- und Access Management an. Dieses Produkt bietet umfangreiche Funktionalitäten wie SSO, MFA, Consent Management. Zudem wird die Funktion Identity Analytics angeboten, d.h. die automatische Analyse von Identitäten und Berechtigungen zum Zweck der Identifizierung von Abweichungen. (vgl. \cite{ibm2024verify})
 \paragraph{Microsoft Entra ID}
 Microsoft bietet mit dem Produkt \glqq{}Microsoft Entra ID\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement von Microsoft und drittpartei Diensten an. Dieses Produkt bietet Funktionen wie z.B. Multi-Faktor-Authentifizierung mittels Microsoft Authenticator.
 \paragraph{SAP Cloud Identity Access Governance}
@@ -181,46 +186,57 @@ Das Unternehmen Okta Inc. ist ein in den USA ansässiges Unternehmen welches sic
 \subsection{Organisatorische Aspekte}
 Im Rahmen der Ausarbeitung eines IAM Konzepts im Unternehmen müssen hierbei klare Verantwortlichkeiten, Prozesse und Technologien definiert werden. Die relevanten Organisationseinheiten zum Identitäts- und Berechtigungsmanagement werden im Folgenden vorgestellt.
 \paragraph{Führungebene}
-IAM fällt unter die Domäne der Informationssicherheit, benötigt jedoch gegebenfalls umfangreiche IT Infrastruktur und Produkte. Auf der Führungsebene im Unternehmen sind daher der Chief Information Security Officer (CISO) und der Chief Information Officer (CIO) für die Umsetzung des Identitäts- und Berechtigungsmanagement verantwortlich.~\cite{azhar2014economics}\cite{baldwin2009using} Im Fall von umfangreichen Anforderungen an das System kann die Umsetzung des IAM ein ganzes Team benötigen.~\cite{mohammed2011identity}
+%fertig
+IAM fällt unter die Domäne der Informationssicherheit, benötigt jedoch gegebenfalls umfangreiche IT Infrastruktur und Produkte. Auf der Führungsebene im Unternehmen sind daher der Chief Information Security Officer (CISO) und der Chief Information Officer (CIO) für die Umsetzung des Identitäts- und Berechtigungsmanagement verantwortlich. (vgl. \cite{mont2010economics} Seite 1)
 \paragraph{Helpdesk}
-Der Helpdesk ist im Unternehmen eine zentrale Anlaufstelle für Probleme mit der Authentifizierung wie vergessener Passwörter oder fehlender Berechtigungen. So wurde bei Umfragen festgestellt dass je nach Unternehmen 10-66 \% aller Helpdesk Tickets aufgrund von vergessener Passwörter erstellt werden.~\cite{ylen2004centralized}\cite{tsolkas2017} Ein wichtiger Aspekt hierbei ist die Einhaltung fester Prozesse welche mögliche Angriffe durch Social Engineering verhindern.~\cite{wood2005implementing}
+%fertig
+Der Helpdesk ist im Unternehmen eine zentrale Anlaufstelle für Probleme mit der Authentifizierung wie vergessener Passwörter oder fehlender Berechtigungen. So wurde bei Umfragen festgestellt dass je nach Unternehmen 10-66 \% aller Helpdesk Tickets aufgrund von vergessener Passwörter erstellt werden. (vgl. \cite{ylen2004centralized} Seite 31, \cite{tsolkas2017} Seite 189-190, \cite{hummer2016adaptive} Seite 11) Ein wichtiger Aspekt hierbei ist die Einhaltung fester Prozesse welche mögliche Angriffe durch Social Engineering verhindern. (vgl. \cite{wood2005implementing}, \cite{ylen2004centralized} Seite 26)
 \paragraph{Personalmanagement}
-Eine Zentrale Rolle in der Provisionierung, Änderung und Deprovisionierung von Identitäten spielt das Personalmanagement. Dieses ist für die erstmalige Erstellung der Identitäten, der Ausgabe von Authentifizierungsinformationen, der Vergabe von Rollen für rollenbasierte Zugriffskontrolle und der Deprovisionierung bei Beurlaubung und Kündigung zuständig.~\cite{YOUNG20045} So bietet z.B. Microsoft Entra ID oder Okta Workforce Identity eine direkte Integration von HR Anwendungen in den Identitäts Lebenszyklus.~\cite{oktahr}~\cite{Billmath2024}
+%fertig
+Eine Zentrale Rolle in der Provisionierung, Änderung und Deprovisionierung von Identitäten spielt das Personalmanagement. Dieses ist für die erstmalige Erstellung der Identitäten, der Ausgabe von Authentifizierungsinformationen, der Vergabe von Rollen für rollenbasierte Zugriffskontrolle und der Deprovisionierung bei Beurlaubung und Kündigung zuständig. (vgl. \cite{mohammed2017systematic} Seite 3) So bietet z.B. Microsoft Entra ID oder Okta Workforce Identity eine direkte Integration von HR Anwendungen in den Identitäts Lebenszyklus an. (vgl. \cite{oktahr}, \cite{Billmath2024})
 \subsection{Technische Aspekte}
-Für die Umsetzung von Identitäts- und Berechtigungsmanagement im Betrieb bieten sich die Lösungen der namhaften Hersteller wie Microsoft, SAP oder Okta an. Dies sind ausgereifte Lösungen mit einer Vielzahl an Funktionalitäten die die Umsetzung des Identitäts- und Berechtigungsmanagements unterstützen. Während der traditionelle Ansatz die Nutzung von On-Premise Services war bewegt sich die IAM Industrie in Richtung von SaaS Modellen. Im Kontext von IAM werden diese Lösungen als IDaaS bezeichnet.~\cite{kunz2014analyzing}
+%fertig
+Für die Umsetzung von Identitäts- und Berechtigungsmanagement im Betrieb bieten sich die Lösungen der namhaften Hersteller wie Microsoft, SAP oder Okta an. Dies sind ausgereifte Lösungen mit einer Vielzahl an Funktionalitäten die die Umsetzung des Identitäts- und Berechtigungsmanagements unterstützen. Während der traditionelle Ansatz die Nutzung von On-Premise Services war bewegt sich die IAM Industrie in Richtung von SaaS Modellen. Im Kontext von IAM werden diese Lösungen als IDaaS bezeichnet. (vgl. \cite{kunz2014analyzing} Seite 274)
 \subsection{Wirtschaftliche Aspekte}
-Die Signifikanz von Identitäts- und Berechtigungsmanagement in Unternehmen tiefgreifend. Es lassen sich 4 Aspekte identifizieren. Security, Produktivität, Compliance und Kundenerlebnis.~\cite{mont2010economics}\cite{azhar2014economics} Diese 4 Aspekte sind im Folgenden aufgeführt.
+Die Signifikanz von Identitäts- und Berechtigungsmanagement in Unternehmen tiefgreifend. Es lassen sich mehrere Aspekte identifizieren. Unter anderem Security, Produktivität, Compliance, Wettbewerbsvorteil durch Zertifizierungen und Kundenerlebnis. Diese Aspekte sind im Folgenden aufgeführt.
 \paragraph{Security}
-Der wirtschaftliche Schaden der durch Datendiebstahl und unautorisierter Kontrolle entstehen kann ist immens.~\cite{azhar2014economics} Wenn ein Mitarbeiter eine Vielzahl an Passwörtern für die unternehmensinternen/unternehmensexternen Dienste verwalten muss kann dies zur unsachgemäßen Handhabung führen - so z.B. Notizen mit Passwörtern oder die Verwendung von schwachen Passwörtern, dies erhöht die Wahrscheinlichkeit von Sicherheitrisiken.~\cite{haag2012selecting}~\cite{azhar2014economics} Im Jahr 2017 fiel Deloitte einem Cyberangriff zum Opfer. Hierbei wurden Nutzernamen, Passwörter, IP Addressen und sensible Unternehmensinformationen von 244.000 Mitarbeitern und Kunden geklaut. Grund für den Cyberangriff war ein Administratoraccount ohne Zugriffsbeschränkungen welcher nur mittels Passwort, ohne MFA geschützt war.~\cite{deloitte2017} Mittels fest definierter Prozesse des Identity Management Life Cycles und Audit dieses können Risiken für ähnliche Angriffe minimiert werden.
+%fertig
+Die wirtschaftlichen Schäden durch Datendiebstahl und unautorisierte Kontrolle sind immens und steigen stetig. (vgl. \cite{furnell2020understanding} Seite 154) Wenn ein Mitarbeiter eine Vielzahl an Passwörtern für die unternehmensinternen/unternehmensexternen Dienste verwalten muss kann dies zur unsachgemäßen Handhabung führen - so z.B. Notizen mit Passwörtern oder die Verwendung von schwachen Passwörtern, dies erhöht die Wahrscheinlichkeit von Sicherheitrisiken. (vgl. \cite{haag2012selecting} Seite 6-8) Im Jahr 2017 fiel Deloitte einem Cyberangriff zum Opfer. Hierbei wurden sensible Daten geklaut. Grund für den Cyberangriff war ein Administratoraccount ohne Zugriffsbeschränkungen welcher nur mittels Passwort, ohne MFA geschützt war. (vgl. \cite{deloitte2017}) Mittels fest definierter Prozesse des Identitäts Lebenszyklus und der Zugriffssteuerung und Auditierung dieser können Risiken für ähnliche Angriffe minimiert werden.
 \paragraph{Produktivität}
+%fertig
 Im vorherigen Abschnitt wurde die sicherheitstechnische Signifikanz von Identitäts- und Berechtigungsmanagement aufgezeigt. Dies kann jedoch einen negativen Einfluss auf die Produktivität von Mitarbeitern haben. So führt z.B. die Verwendung von mehreren verschiedenen Systemen, alle mit unterschiedlichen Authentifizierungsverfahren dazu dass Mitarbeiter verschiedene Passwörter verwalten müssen oder sich in jedem System separat authentifizieren müssen.~\cite{radha2012survey}\cite{haag2012selecting} Ein weiterer Aspekt sind vergessene Passwörter mit Unterbrechungen im Arbeitsablauf und hohem Helpdesk aufwand. Mit der Anwendung von SSO Verfahren lässt sich dieser Aufwand auf ein Minimum reduzieren.~\cite{thakur2015user} Während die Umsetzung des Principle of Least Privilege wünscheswert ist können schlecht konfigurierte Zugriffsberechtigungen dazu führen dass Mitarbeiter ihre Arbeit unterbrechen müssen um neue Rechte anzufordern. Dies kann unter Umständen zu teuren Verzögerungen im direkten Arbeitsablauf adminstrativer oder operativer Aufgaben führen.~\cite{weishaupl2015towards}
 \paragraph{Kundenerlebnis}
-Im Kontext des Customer IAM führen ungeeignete IAM Lösungen zu erhöhter Komplexität für den Nutzer. Eine strikte Umsetzung von starken Passwörtern oder die Nutzung einer weiteren MFA-App kann für den Kunden abschreckend sein. Somit steigt der Kunde möglicherweise zur Konkurrenz um.~\cite{azhar2014economics} Durch das Anbieten von SSO mittels externer Dienste lässt sich die Komplexität und das Risiko von Sicherheitsproblemen reduzieren.
+%fertig
+Im Kontext des Customer IAM führen ungeeignete IAM Lösungen zu erhöhter Komplexität für den Nutzer. Eine strikte Umsetzung von starken Passwörtern oder die Nutzung einer weiteren MFA-App kann für den Kunden abschreckend sein. (vgl. \cite{azhar2014economics} Seite 545, \cite{liveretos2022customer} Seite 472) Somit steigt der Kunde möglicherweise zur Konkurrenz um. Durch das Anbieten von SSO mittels externer Dienste lässt sich die Komplexität und das Risiko von Sicherheitsproblemen reduzieren.
 \paragraph{Wettbewerbsvorteil durch Zertifizierungen}
-Zertifizierungen mit Sicherheitsstandards wie der ISO 27001 können zu einem Wettbewerbsvorteil führen denn diese sind ein Indikator für Qualität.~\cite{dobrin2015quality} Somit kann die Umsetzung von Identitäts- und Berechtigungsmanagement im Rahmen einer ISO 27001 Zertifizierung zu einem Wettbewerbsvorteil führen.
+%fertig
+Zertifizierungen mit Sicherheitsstandards wie der ISO 27001 können zu einem Wettbewerbsvorteil führen denn diese sind für Kunden ein möglicher Indikator für Qualität. (vgl. \cite{dobrin2015quality} Seite 1071-1072) Somit kann die Umsetzung von Identitäts- und Berechtigungsmanagement im Rahmen einer ISO 27001 Zertifizierung zu einem Wettbewerbsvorteil führen.
 \paragraph{Compliance}
 \subparagraph{EuroSOX}
-Die Richtlinie 2006/43/EG, durch den direkten Bezug zum Sarbanes Oxley Act auch EuroSOX genannt fordert im Rahmen des Internen Kontrollsystems (IKS) nach einer Berechtigungsvergabe und Funktionstrennung im Unternehmen. Dies stellt eine direkte Forderung für Identitäts- und Berechtigungsmanagement dar.~\cite{conta2017leitfaden}
+%fertig
+Die Richtlinie 2006/43/EG, durch den direkten Bezug zum Sarbanes Oxley Act auch EuroSOX genannt fordert im Rahmen des Internen Kontrollsystems (IKS) nach einer Berechtigungsvergabe und Funktionstrennung im Unternehmen. Dies stellt eine direkte Forderung für Identitäts- und Berechtigungsmanagement dar. (vgl. \cite{conta2017leitfaden} Seite 15)
 \subparagraph{KonTraG}
-Das KonTraG fordert Unternehmen auf ein Risikomanagementsystem zu implementieren. Unauthorisierter Zugriff auf sensible Daten und Geschäftsprozesse kann in diesem Kontext als Risiko aufgefasst werden. D.h. es besteht eine indirekte Forderung nach Identitäts- und Berechtigungsmanagement.~\cite{conta2017leitfaden}
+%fertig
+Das KonTraG fordert Unternehmen auf ein Risikomanagementsystem zu implementieren. Unauthorisierter Zugriff auf sensible Daten und Geschäftsprozesse kann in diesem Kontext als Risiko aufgefasst werden. D.h. es besteht eine indirekte Forderung nach Identitäts- und Berechtigungsmanagement. (vgl. \cite{conta2017leitfaden} Seite 16-17)
 \subparagraph{BDSG}
-Im BDSG nimmt Identitäts- und Berechtigungsmanagement eine zentrale Rolle ein.
+Im BDSG nimmt Identitäts- und Berechtigungsmanagement eine zentrale Rolle ein. (vgl. \cite{conta2017leitfaden} Seite 21-24)
 \begin{itemize}
-  \item Zutrittskontrolle, Zugriffskontrolle: Systeme die personenbezogene Daten verarbeiten müssen vor unauthorisiertem Zutritt und Zugriff geschützt werden.~\cite{conta2017leitfaden} Dies stellt eine direkte Forderung für physische und logische Berechtigungskontrollen dar.
-  \item Weitergabekontrolle: Beim Transport von personenbezogenen Daten die Vertraulichkeit und Integrität der Daten gewährleistet wird und dass jegliche Transaktionen protokolliert werden müssen.~\cite{conta2017leitfaden} Dies stellt eine direkte Forderung für Audit-Trails und Berechtigungskontrollen dar.
-  \item Eingabekontrolle: Bei der Erfassung von personenbezogenen Daten muss die Nachvollziehbarkeit des Ursprungs gewährleistet sein.~\cite{conta2017leitfaden} Dies stellt eine direkte Forderung für Audit-Trails dar.
+  \item Zutrittskontrolle, Zugriffskontrolle: Systeme die personenbezogene Daten verarbeiten müssen vor unauthorisiertem Zutritt und Zugriff geschützt werden. Dies stellt eine direkte Forderung für physische und logische Berechtigungskontrollen dar.
+  \item Weitergabekontrolle: Beim Transport von personenbezogenen Daten die Vertraulichkeit und Integrität der Daten gewährleistet wird und dass jegliche Transaktionen protokolliert werden müssen. Dies stellt eine direkte Forderung für Audit-Trails und Berechtigungskontrollen dar.
+  \item Eingabekontrolle: Bei der Erfassung von personenbezogenen Daten muss die Nachvollziehbarkeit des Ursprungs gewährleistet sein. Dies stellt eine direkte Forderung für Audit-Trails dar.
 \end{itemize}
 \paragraph{EU-DSGVO}
-Die DSGVO stellt verschiedenste Forderungen für die sichere Erhebung, Speicherung und Verarbeitung von personenbezogener Daten.~\cite{Hindle_2020}
+%fertig
+Die DSGVO stellt verschiedenste Forderungen für die sichere Erhebung, Speicherung und Verarbeitung von personenbezogener Daten. (vgl. \cite{Hindle_2020}, \cite{eu2016})
 \begin{itemize}
-  \item Artikel 5 - Grundsätze für die Verarbeitung personenbezogener Daten - Paragraph 1.f: Die Integrität und Vertraulichkeit personenbezogene Daten muss gewährleistet sein.~\cite{eu2016} Somit müssen geeignete Verfahren zur Zutritts und Zugriffskontrolle vorhanden sein.
-  \item Artikel 15 - Auskunftsrecht der betroffenen Person - Paragraph 3: Das betroffene Person über die Daten erhoben wurde hat das Recht Auskunft über alle personenbezogenen Daten anzufordern.~\cite{eu2016} Hierbei sind geeignete Prozesse im Rahmen des Identitätsmanagements zu definieren. Diese müssen durch geeignete Authentifizierungsverfahren geschützt werden um die Vertraulichkeit der Weitergabe zu gewährleisten.
-  \item Artikel 17 - Recht auf Löschung - Paragraph 1: Die betroffene Person hat das Recht eine Forderung für die unverzügliche Löschung der Daten einzureichen.~\cite{eu2016} Hierbei sind geeignete Prozesse im Rahmen des Identitätsmanagements zu definieren.
+  \item Artikel 5 - Grundsätze für die Verarbeitung personenbezogener Daten - Paragraph 1.f: Die Integrität und Vertraulichkeit personenbezogene Daten muss gewährleistet sein. Somit müssen geeignete Verfahren zur Zutritts und Zugriffskontrolle vorhanden sein.
+  \item Artikel 15 - Auskunftsrecht der betroffenen Person - Paragraph 3: Das betroffene Person über die Daten erhoben wurde hat das Recht Auskunft über alle personenbezogenen Daten anzufordern. Hierbei sind geeignete Prozesse im Rahmen des Identitätsmanagements zu definieren. Diese müssen durch geeignete Authentifizierungsverfahren geschützt werden um die Vertraulichkeit der Weitergabe zu gewährleisten.
+  \item Artikel 17 - Recht auf Löschung - Paragraph 1: Die betroffene Person hat das Recht eine Forderung für die unverzügliche Löschung der Daten einzureichen. Hierbei sind geeignete Prozesse im Rahmen des Identitätsmanagements zu definieren.
 \end{itemize}
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 \begin{itemize}
   \item Die Umsetzung von IAM kann kostspielig sein denn das Management und die eingesetzten Technologien sind teuer. Rechtlichen Vorgaben sind jedoch nicht optional und die Risiken von fehlendem IAM können enorm sein.
-  \item Es gibt eine Vielzahl rechtlicher Vorgaben welche die Umsetzung von Identitäts- und Berechtigungsmanagement fordern. So z.B. das EuroSOX, KonTraG, BDSG und die EU-DSGVO
+  \item Es gibt eine Vielzahl rechtlicher Vorgaben welche die Umsetzung von Identitäts- und Berechtigungsmanagement fordern. So z.B. die EuroSOX, KonTraG, BDSG und die EU-DSGVO
   \item Die sorgfältige Umsetzung von Identitäts- und Berechtigungsmanagement im Rahmen eines Informationssicherheitsmanagementsystems spielt eine zentrale Rolle im Risikomanagement
 \end{itemize}
 \section{Fazit}
