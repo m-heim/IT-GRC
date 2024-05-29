@@ -10,4 +10,9 @@
 - Wieso Unterscheidung wirtschaftliche Aspekte und betriebliche Motiviation? Gibt es Unterschiede? Wo sind gesetzliche Vorgaben?
 - Was ist mit wirtschaftliche Aspekte gemeint? Gründe für die Wirtschaftlichkeit von IAM?
 - Neue Forschungsfrage "Welche Gesetze in Deutschland sind treibende Faktoren für Identitäts- und Berechtigungsmanagement?"
-- Wie ausführlich Kapitel "Standards, Methoden, Technologien und Tools"?
+
+## 29.05.2024
+- Zu "wer führt IAM operativ durch" keine Literatur, daher Hypothese mit unterstützenden Daten von Microsoft?
+- Sind die Abschnitte in "Methoden, Technologien und Tools" korrekt?
+- Neues Kapitel zu Rechtlichen Aspekten oder unter Wirtschafliche Aspekte?
+- Wieso Unterscheidung wirtschaftliche Aspekte und betriebliche Motiviation? Gibt es Unterschiede?

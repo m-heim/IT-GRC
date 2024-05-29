@@ -104,41 +104,48 @@ Eine speziell für Identitätsmanagement erstellte Norm ist die ISO/IEC 24760. H
 \paragraph{NIST 800-53A}
 %fertig
 Das National Institute of Standards and Technology (NIST) publizierte die \glqq{}NIST Special Publication 800-53A - Assessing Security and Privacy Controls in Information Systems and Organizations\grqq{}. Dieses Dokument stellt Prozesse und Methoden für die Bewertung von Sicherheits- und Datenschutzmaßnahmen vor. Im Kapitel \glqq{}Security and Privacy Assessment Procedures\grqq{} wird im Unterkapitel 4.1 \glqq{}Access Control Family (AC)\grqq{} auf Zugangskontrolle und im Unterkapitel 4.7 \glqq{}Identification and Authentication Family (IA)\grqq{} auf Identifizierung und Authentifizierung eingegangen. (vgl. \cite{nist202280053a})
-\subsection{Methoden und Prozesse}
-\subsubsection{Identitäts Lebenszyklus}
+\subsection{Methoden}
+\paragraph{Föderierte Identität}
+\paragraph{Single Sign On}
+\paragraph{Multi Faktor Authentifizierung}
+\paragraph{Rollenbasierte Zugriffskontrolle}
+\subsection{Prozesse}
+\paragraph{Identitäts Lebenszyklus}
 %fertig
-Ein zentraler Prozess welcher im Rahmen des Identitätsmanagements definiert und umgesetzt werden muss ist der Identitäts Lebenszyklus. Dieser enthält die grundlegenden Elemente Geburt, Leben, Änderung, Tod und Governance. Der Prozess ist in \cref{fig:idlc} dargestellt und wird nachfolgend genauer beschrieben. (vgl. \cite{bertino2010identity} Seite 29-37)
+Ein zentraler Prozess welcher im Rahmen des Identitätsmanagements definiert und umgesetzt werden muss ist der Identitäts Lebenszyklus. Dieser enthält die grundlegenden Elemente Geburt, Leben, Änderung, Tod und Governance. Der Prozess ist in \cref{fig:idlc} dargestellt und wird nachfolgend genauer beschrieben. (vgl. \cite{bertino2010identity} Seite 29-37 (ganzer Paragraph))
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{assets/idlc.png}
   \caption{Identity Life Cycle - Basierend auf Grafik 2.3 aus Identity Management Concepts, Technologies, and Systems von Elisa Bertino und Kenji Takahashi}\label{fig:idlc}
 \end{figure}
-\paragraph{Geburt}
-\subparagraph{Festlegung und Überprüfung von Attributen}
-Der erste Schritt in der Geburt einer Identität ist die Sammlung relevanter Attribute wie Name, Geburtsdatum, Wohnsitz, Rolle im Unternehmen etc. und Überprüfung dieser.
-\subparagraph{Festlegen von Anmeldeinformationen}
-Um dem Subjekt Zugriff auf die provisionierte Identität zu geben müssen Bezeichner (z.B. E-Mail Addressen oder Nutzernamen) und geeignete Verfahren zur Authentifikation festgelegt werden. So werden in diesem Schritt z.B. Einmalpasswörter für die initiale Anmeldung vergeben oder der Fingerabdruck der zu authentifizierenden Person gespeichert.
-\subparagraph{Abschließende Erstellung}
-Nachdem alle relevanten Informationen zur Erstellung der Identität gesammelt wurden kann die Identität erstellt werden.
+\subparagraph{Geburt}
+\begin{itemize}
+  \item Datensammlung \& Verifikation: Der erste Schritt in der Geburt einer Identität ist die Sammlung relevanter Attribute wie Name, Geburtsdatum, Wohnsitz, Rolle im Unternehmen etc. und Überprüfung dieser.
+  \item Zugangsdaten: Um dem Subjekt Zugriff auf die provisionierte Identität zu geben müssen Bezeichner (z.B. E-Mail Addressen oder Nutzernamen) und geeignete Verfahren zur Authentifikation festgelegt werden. So werden in diesem Schritt z.B. Einmalpasswörter für die initiale Anmeldung vergeben oder der Fingerabdruck der zu authentifizierenden Person gespeichert.
+  \item Erstellung: Nachdem alle relevanten Informationen zur Erstellung der Identität gesammelt wurden kann die Identität erstellt werden.
+\end{itemize}
 \paragraph{Leben}
-\subparagraph{Authentifizierung}
-Die Authentifizierung der eignenen Identität ermöglicht die gesicherte Nutzung von Ressourcen.
-\subparagraph{Weitergabe von Identitätsinformationen}
-Verfahren zur Weitergabe von Informationen sind ein zentraler Aspekt beim Ausleben einer digitalen Identität.
+\begin{itemize}
+  \item Authentifizierung: Die Authentifizierung der eignenen Identität ermöglicht die gesicherte Nutzung von Ressourcen. Sie sind eine zentrale Komponente im Leben einer Identität.
+  \item Teilen von Attributen: Verfahren zur Weitergabe von Informationen sind ein zentraler Aspekt beim Ausleben einer digitalen Identität.
+\end{itemize}
 \paragraph{Aktualisierung}
-\subparagraph{Änderungen}
-Bei Änderung von Attributen wie z.B. Rollen im Unternehmen, Wohnort oder Namensänderung müssen die Attribute schnellstmöglich aktualisiert werden um die Integrität dieser zu gewährleisten. Zugangsdaten wie neu ausgestellte Zertifikate oder geänderte Passwörter müssen ebenso aktualisiert werden um die Authentifizierung zu gewährleisten.
+\begin{itemize}
+  \item Attributsänderung: Bei Änderung von Attributen wie z.B. Rollen im Unternehmen, Wohnort oder Namensänderung müssen die Attribute schnellstmöglich aktualisiert werden um die Integrität dieser zu gewährleisten.
+  \item Urlaub/Krankheit: Eine wenig diskutierte aber sinnvoll erscheinende Änderung an Identitäten ist der Entzug von Berechtigungen während dem Urlaub oder Krankheit. Somit können nicht genutzte Berechtigungen für IT Systeme und Zugänge entzogen werden, andernfalls kann dies ein grundloses Risiko darstellen. (vgl. \cite{tsolkas2017} Seite 44)
+  \item Zugangsdatenänderung: Zugangsdaten wie neu ausgestellte Zertifikate oder geänderte Passwörter müssen ebenso aktualisiert werden um die Authentifizierung zu gewährleisten.
+\end{itemize}
 \paragraph{Tod}
-\subparagraph{Entzug von Zugangsrechten}
-Bei der Kündigung oder Beurlaubung von Mitarbeitern oder bei der Dekommisionierung von Systemen muss der Zugriff auf Ressourcen aufgehoben werden um Sicherheitsrisiken zu verhindern. In diesem Szenario ist es jedoch auch wichtig die Identitätsinformationen weiterhin zu persistieren um für zukünftige Untersuchungen wie z.B. des Audit-Trails eine Zuordnung zu haben.
+\begin{itemize}
+  \item Kündigung: Bei der Kündigung von Mitarbeitern oder bei der Dekommisionierung von Systemen muss der Zugriff auf Ressourcen aufgehoben werden um Sicherheitsrisiken zu verhindern. In diesem Szenario ist es jedoch auch wichtig die Identitätsinformationen weiterhin zu persistieren um für zukünftige Untersuchungen wie z.B. des Audit-Trails eine Zuordnung zu haben.
+\end{itemize}
 \paragraph{Governance}
-\subparagraph{Richtlinien}
-Die Administration, Nutzung und Weitergabe von Identitätsinformationen muss klar durch Richtlinien definiert sein.
-\subparagraph{Audit Trail}
-Jegliche Transaktionen bezüglich Zugriff, Änderung oder Weitergabe von Identitätsinformationen sollten aufgezeichnet werden um die Rückverfolgbarkeit zu gewährleisten.
-\subsection{Technologien und Tools}
-IAM Tools ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM. So gibt es einige standarisierte Technologien die bei der Implementierung von Identitäts- und Berechtigungsmanagement angewendet werden können. Zur konkreten Umsetzung in Organisationen gibt einige quelloffene Lösungen und von den großen Technologiekonzernen wie Microsoft, SAP, IBM, Oracle werden kommerzielle Lösungen angeboten. Im Folgenden werden einige standartisierte Technologien und Produkte vorgestellt welche bei der Umsetzung von CIAM und IAM verwendet werden.
-\subsubsection{Standardisierte Technologien}
+\begin{itemize}
+  \item Governance Richtlinien: Die Administration, Nutzung und Weitergabe von Identitätsinformationen muss klar durch Richtlinien definiert sein.
+  \item Audit-Trail: Jegliche Transaktionen bezüglich Zugriff, Änderung oder Weitergabe von Identitätsinformationen sollten aufgezeichnet werden um die Rückverfolgbarkeit zu gewährleisten.
+\end{itemize}
+\subsection{Technologien}
+Es existieren einige standardisierte Technologien die im Kontext vom Identitäts- und Berechtigungsmanagement eingesetzt werden.
 \paragraph{SAML}
 SAML ist ein weit verbreiteter Standard zur Umsetzung von Sicherheits-Assertationen. Mit SAML wird ein XML Format definiert welches zur Authentifizierung und Authorisierung von Nutzern verwendet werden kann. Im Kontext von SAML werden verschiedene Begrifflichkeiten definiert.~\cite{hughes2005security}
 \begin{itemize}
@@ -162,7 +169,8 @@ Der Ablauf des Protokolls ist in Grafik~\cref{fig:oauth} abgebildet.~\cite{rfc67
 \end{figure}
 \paragraph{OpenID}
 OpenID Connect (OIDC) ist ein auf OAuth 2.0 basierender Standard für föderierte Authentifizierung welches die veraltete OpenID 2.0 Spezifikation ablößt. Somit kann im Rahmen des Identitätsmanagements ein zentraler OpenID Provider (OP) über ein REST API zur Authentifizierung und SSO eingesetzt werden.~\cite{naik2017choice}
-\subsubsection{IAM Lösungen}
+\subsection{Tools}
+IAM Lösungen ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM. Zur konkreten Umsetzung in Organisationen gibt einige quelloffene Lösungen und von den großen Technologiekonzernen wie Microsoft, SAP, IBM, Oracle werden kommerzielle Lösungen angeboten. Im Folgenden werden quelloffene und kommerzielle Produkte vorgestellt welche bei der Umsetzung von CIAM und IAM verwendet werden können.
 \paragraph{Shibboleth}
 %fertig
 Shibboleth ist eine auf SAML basierende, quelloffene Lösung zur Umsetzung von föderierter Identität. Shibboleth kann in diesem Kontext als Identity Provider und Service Provider verwendet werden. Somit kann eine SSO Integration von verschiedensten Anwendungen realisiert werden. (vgl. \cite{kamal2015shibboleth} Kapitel 5) Die Technologie setzt sich aus 4 Software Paketen zusammen. Die Softwarepakete sind hierbei der Identity Provider, Service Provider, Embedded Discovery Service und der Metadata Aggregator. Der Embedded Discovery Service erlaubt einem SP mehrere IdP's zur Verfügung zu stellen. Der Metadata Aggregator erlaubt die dynamische Abfrage von Metadaten vom Identity Provider (vgl. \cite{shibboleth2024software})
@@ -188,12 +196,14 @@ Im Rahmen der Ausarbeitung eines IAM Konzepts im Unternehmen müssen hierbei kla
 \paragraph{Führungebene}
 %fertig
 IAM fällt unter die Domäne der Informationssicherheit, benötigt jedoch gegebenfalls umfangreiche IT Infrastruktur und Produkte. Auf der Führungsebene im Unternehmen sind daher der Chief Information Security Officer (CISO) und der Chief Information Officer (CIO) für die Umsetzung des Identitäts- und Berechtigungsmanagement verantwortlich. (vgl. \cite{mont2010economics} Seite 1)
+\paragraph{Administration}
+Im Unternehmen haben CIO und CISO möglicherweise nicht die Kapazität das Identitäts- und Berechtigungsmanagement im Alleingang umzusetzen. In diesem Fall sind dem CIO und CISO möglicherweise ein oder mehrere Administratoren unterstellt welche die Implementierung und Wartung der Systeme im Kontext des Identitäts- und Berechtigungsmanagements bewerkstelligen. (vgl. \cite{microsoft2024iamadmin})
 \paragraph{Helpdesk}
 %fertig
 Der Helpdesk ist im Unternehmen eine zentrale Anlaufstelle für Probleme mit der Authentifizierung wie vergessener Passwörter oder fehlender Berechtigungen. So wurde bei Umfragen festgestellt dass je nach Unternehmen 10-66 \% aller Helpdesk Tickets aufgrund von vergessener Passwörter erstellt werden. (vgl. \cite{ylen2004centralized} Seite 31, \cite{tsolkas2017} Seite 189-190, \cite{hummer2016adaptive} Seite 11) Ein wichtiger Aspekt hierbei ist die Einhaltung fester Prozesse welche mögliche Angriffe durch Social Engineering verhindern. (vgl. \cite{wood2005implementing}, \cite{ylen2004centralized} Seite 26)
-\paragraph{Personalmanagement}
+\paragraph{Personalabteilung}
 %fertig
-Eine Zentrale Rolle in der Provisionierung, Änderung und Deprovisionierung von Identitäten spielt das Personalmanagement. Dieses ist für die erstmalige Erstellung der Identitäten, der Ausgabe von Authentifizierungsinformationen, der Vergabe von Rollen für rollenbasierte Zugriffskontrolle und der Deprovisionierung bei Beurlaubung und Kündigung zuständig. (vgl. \cite{mohammed2017systematic} Seite 3) So bietet z.B. Microsoft Entra ID oder Okta Workforce Identity eine direkte Integration von HR Anwendungen in den Identitäts Lebenszyklus an. (vgl. \cite{oktahr}, \cite{Billmath2024})
+Eine Zentrale Rolle im Identity Life Cycle spielt die Personalabteilung. Dieses ist für die erstmalige Erstellung der Identitäten, der Ausgabe von Authentifizierungsinformationen, der Vergabe von Rollen für rollenbasierte Zugriffskontrolle und der Deprovisionierung bei Beurlaubung und Kündigung zuständig. (vgl. \cite{mohammed2017systematic} Seite 3) So bietet z.B. Microsoft Entra ID oder Okta Workforce Identity eine direkte Integration von HR Anwendungen in den Identitäts Lebenszyklus an. (vgl. \cite{oktahr}, \cite{Billmath2024})
 \subsection{Technische Aspekte}
 %fertig
 Für die Umsetzung von Identitäts- und Berechtigungsmanagement im Betrieb bieten sich die Lösungen der namhaften Hersteller wie Microsoft, SAP oder Okta an. Dies sind ausgereifte Lösungen mit einer Vielzahl an Funktionalitäten die die Umsetzung des Identitäts- und Berechtigungsmanagements unterstützen. Während der traditionelle Ansatz die Nutzung von On-Premise Services war bewegt sich die IAM Industrie in Richtung von SaaS Modellen. Im Kontext von IAM werden diese Lösungen als IDaaS bezeichnet. (vgl. \cite{kunz2014analyzing} Seite 274)
