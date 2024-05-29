@@ -91,7 +91,8 @@ Die systematische Unterteilung von Identitäts- und Berechtigungsmanagement erwe
 \section{Methoden, Technologien und Tools}
 \label{sec:existing}
 \subsection{Betriebliche Motivation}
-\subsection{Standards}
+% motiviation für den einsatz von methoden, tools und technologien
+\subsection{Standardisierte Methoden}
 \paragraph{BSI}
 %fertig
 Das Bundesamt für Sicherheit der Informationstechnik (BSI) definiert den IT-Grundschutz. Dieser besteht aus den BSI-Standards und dem IT-Grundschutz-Kompendium. (vgl. \cite{bsi2017grundschutz}) In BSI-Standard 200-1 werden Sicherheitsmaßnahmen definiert die zur Behandlung der Risiken geeignet sind, in diesen Sicherheitsmaßnahmen wird das Identitäts- und Berechtigungsmanagement als Sicherheitsmaßnahme aufgeführt. (vgl. \cite{bsi20172001} Seite 35) In Bezug auf den BSI-Standard definiert das IT-Grundschutz-Kompendium Prozessbausteine zur Umsetzung des ISMS.(vgl. \cite{bsi2023kompendium}) Hier wird im Prozessbaustein \glqq{}ORP.4 Identitäts- und Berechtigungsmanagent\grqq{} auf verschiedene Anforderungen für die Umsetzung von Identitäts- und Berechtigungsmanagement eingegangen. Kapitel 3.1 definiert Basis-Anforderungen welche umgesetzt werden müssen. Kapitel 3.2 definiert Standard-Anforderungen welche umgesetzt werden sollten. Kapitel 3.3 definiert Anforderungen welche bei erhöhtem Schutzbedarf umgesetzt werden sollten. (vgl. \cite{orp4}) Zusätzlich zu ORP.4 gibt es das Dokument \glqq{}Umsetzungshinweise zum Baustein: ORP.4. Identitäts- und Berechtigungsmanagement\grqq{} welches spezifische Maßnahmen zur Umsetzung von ORP.4 definiert. (vgl. \cite{bsi2022umsetzungshinweiseorp4})
@@ -197,8 +198,8 @@ Im Rahmen der Ausarbeitung eines IAM Konzepts im Unternehmen müssen hierbei kla
 \paragraph{Führungebene}
 %fertig
 IAM fällt unter die Domäne der Informationssicherheit, benötigt jedoch gegebenfalls umfangreiche IT Infrastruktur und Produkte. Auf der Führungsebene im Unternehmen sind daher der Chief Information Security Officer (CISO) und der Chief Information Officer (CIO) für die Umsetzung des Identitäts- und Berechtigungsmanagement verantwortlich. (vgl. \cite{mont2010economics} Seite 1)
-\paragraph{Administration}
-Im Unternehmen haben CIO und CISO möglicherweise nicht die Kapazität das Identitäts- und Berechtigungsmanagement im Alleingang umzusetzen. In diesem Fall sind dem CIO und CISO möglicherweise ein oder mehrere Administratoren unterstellt welche die Implementierung und Wartung der Systeme im Kontext des Identitäts- und Berechtigungsmanagements bewerkstelligen. (vgl. \cite{microsoft2024iamadmin})
+\paragraph{IT-Betrieb}
+Im Unternehmen sind CIO und CISO zwar für das Identitäts- und Berechtigungsmanagement grundlegend verantwortlich, nicht jedoch für die operative Umsetzung dieses. Daher sind dem CIO und CISO möglicherweise ein oder mehrere Administratoren unterstellt welche die Implementierung und Wartung der Systeme im Kontext des Identitäts- und Berechtigungsmanagements bewerkstelligen. (vgl. \cite{microsoft2024iamadmin})
 \paragraph{Helpdesk}
 %fertig
 Der Helpdesk ist im Unternehmen eine zentrale Anlaufstelle für Probleme mit der Authentifizierung wie vergessener Passwörter oder fehlender Berechtigungen. So wurde bei Umfragen festgestellt dass je nach Unternehmen 10-66 \% aller Helpdesk Tickets aufgrund von vergessener Passwörter erstellt werden. (vgl. \cite{ylen2004centralized} Seite 31, \cite{tsolkas2017} Seite 189-190, \cite{hummer2016adaptive} Seite 11) Ein wichtiger Aspekt hierbei ist die Einhaltung fester Prozesse welche mögliche Angriffe durch Social Engineering verhindern. (vgl. \cite{wood2005implementing}, \cite{ylen2004centralized} Seite 26)
@@ -208,7 +209,7 @@ Eine Zentrale Rolle im Identity Life Cycle spielt die Personalabteilung. Dieses 
 \subsection{Technische Aspekte}
 %fertig
 Für die Umsetzung von Identitäts- und Berechtigungsmanagement im Betrieb bieten sich die Lösungen der namhaften Hersteller wie Microsoft, SAP oder Okta an. Dies sind ausgereifte Lösungen mit einer Vielzahl an Funktionalitäten die die Umsetzung des Identitäts- und Berechtigungsmanagements unterstützen. Während der traditionelle Ansatz die Nutzung von On-Premise Services war bewegt sich die IAM Industrie in Richtung von SaaS Modellen. Im Kontext von IAM werden diese Lösungen als IDaaS bezeichnet. (vgl. \cite{kunz2014analyzing} Seite 274)
-\subsection{Wirtschaftliche Aspekte}
+\subsection{Wirtschaftliche und rechtliche Aspekte}
 Die Signifikanz von Identitäts- und Berechtigungsmanagement in Unternehmen tiefgreifend. Es lassen sich mehrere Aspekte identifizieren. Unter anderem Security, Produktivität, Compliance, Wettbewerbsvorteil durch Zertifizierungen und Kundenerlebnis. Diese Aspekte sind im Folgenden aufgeführt.
 \paragraph{Security}
 %fertig

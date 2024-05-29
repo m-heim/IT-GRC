@@ -12,6 +12,7 @@
 - Neue Forschungsfrage "Welche Gesetze in Deutschland sind treibende Faktoren für Identitäts- und Berechtigungsmanagement?"
 
 ## 29.05.2024
+- 20+ Seiten zu viel?
 - Zu "wer führt IAM operativ durch" keine Literatur, daher Hypothese mit unterstützenden Daten von Microsoft?
 - Sind die Abschnitte in "Methoden, Technologien und Tools" korrekt?
 - Neues Kapitel zu Rechtlichen Aspekten oder unter Wirtschafliche Aspekte?

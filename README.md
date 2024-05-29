@@ -52,6 +52,7 @@ Clouds]
 - https://pdf.sciencedirectassets.com/305941/1-s2.0-S2215098618X00068/1-s2.0-S2215098617316750/main.pdf - [Identity and access management in cloud environment: Mechanisms and challenges]
 - https://dspace.bracu.ac.bd/xmlui/bitstream/handle/10361/17566/22141060%2c%2022141064%2c%2022141049_CSE.pdf?sequence=1&isAllowed=y - [A Multi-Layer Security System for Data Access Control, Authentication, and Authorization] - [Definitions, IDaaS]
 - https://www.proquest.com/docview/2775799672?pq-origsite=gscholar&fromopenview=true&sourcetype=Scholarly%20Journals - [Identity and Access Management: High-level Conceptual Framework] - [Concept, Definitions, Framework]
+- https://d1wqtxts1xzle7.cloudfront.net/33445363/023_2011-08_Optimizing_IAM_Frameworks-libre.pdf?1397215360=&response-content-disposition=inline%3B+filename%3DOptimizing_Identity_and_Access_Managemen.pdf&Expires=1716989785&Signature=R9NdhRsapLKJOAvJQ1Csd6yrAB9l7dLgy9DL~vDA4ZQCpfZXFJPi7S27EoHVA7DKDs2fpzS-sHwxydcJOd3M5jybgBuugTGWE4A1BwkZaE~VTfOjOOC-67t89af6u9KAFD~Ou5kheqbTrTsZjce4PR~yyIfGWD4i2W0MtFJvOAoJN7ODI7Ya2wHhqqOvKtv34GJ-ZbHB5rLArFjPtAzwt5bz1rqcwuYHt2mr-xLG8NKjsJGnhaZ-5TxUUqUCKVTNbeIQ6dfc2EX10X-eyii5uELIzn7P-LE7-0lNpjheNs-THK7oOqSeW-059qA3d0RTTjVOITh4G24eNP0njq61fg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA - [Optimizing IAM Frameworks]
 
 ## Economics of IAM
 - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b556abe34f19d5df5ce551ce023ffecda6f76429 - [Economics of Identity and Access Management: a Case Study on Enterprise Business Services]
