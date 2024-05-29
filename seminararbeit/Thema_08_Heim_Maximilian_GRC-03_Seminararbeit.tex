@@ -144,6 +144,7 @@ Ein zentraler Prozess welcher im Rahmen des Identitätsmanagements definiert und
   \item Governance Richtlinien: Die Administration, Nutzung und Weitergabe von Identitätsinformationen muss klar durch Richtlinien definiert sein.
   \item Audit-Trail: Jegliche Transaktionen bezüglich Zugriff, Änderung oder Weitergabe von Identitätsinformationen sollten aufgezeichnet werden um die Rückverfolgbarkeit zu gewährleisten.
 \end{itemize}
+\paragraph{Audit}
 \subsection{Technologien}
 Es existieren einige standardisierte Technologien die im Kontext vom Identitäts- und Berechtigungsmanagement eingesetzt werden.
 \paragraph{SAML}
@@ -180,7 +181,7 @@ IBM bietet mit dem Produkt \glqq{}IBM Security Verify\grqq{} eine Cloud basierte
 \paragraph{Microsoft Entra ID}
 Microsoft bietet mit dem Produkt \glqq{}Microsoft Entra ID\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement von Microsoft und drittpartei Diensten an. Dieses Produkt bietet Funktionen wie z.B. Multi-Faktor-Authentifizierung mittels Microsoft Authenticator.
 \paragraph{SAP Cloud Identity Access Governance}
-SAP bietet mit dem Produkt \glqq{}SAP Cloud Identity Access Governenace\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement an. SAP selbst schreibt dem Produkt eine intuitive Bedienung, hohe Anpassbarkeit und skalierbare Funktionen zu.
+SAP bietet mit dem Produkt \glqq{}SAP Cloud Identity Access Governenace\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement an.
 \paragraph{Okta Inc.}
 Das Unternehmen Okta Inc. ist ein in den USA ansässiges Unternehmen welches sich auf IAM spezialisiert hat. Mit rund 6000 Mitarbeitern und mehr als einer Milliarde US-Dollar an Umsatz ist es ein führender Hersteller von IAM Produkten. Vom Unternehmen werden 2 Produkte angeboten. Customer Identity Cloud und Workforce Identity Cloud. Customer Identity Cloud ist eine Lösung zum Customer Identity Management, d.h. es ermöglicht die sichere Verwaltung und Authentifizierung von Kunden-Identitäten. Workforce Identity Cloud ist eine Lösung zum Unternehmensinternen Identitäts- und Berechtigungsmanagement.
 \subsection{Erkenntnisse im Kontext von IT-GRC}
@@ -232,7 +233,7 @@ Das KonTraG fordert Unternehmen auf ein Risikomanagementsystem zu implementieren
 Im BDSG nimmt Identitäts- und Berechtigungsmanagement eine zentrale Rolle ein. (vgl. \cite{conta2017leitfaden} Seite 21-24)
 \begin{itemize}
   \item Zutrittskontrolle, Zugriffskontrolle: Systeme die personenbezogene Daten verarbeiten müssen vor unauthorisiertem Zutritt und Zugriff geschützt werden. Dies stellt eine direkte Forderung für physische und logische Berechtigungskontrollen dar.
-  \item Weitergabekontrolle: Beim Transport von personenbezogenen Daten die Vertraulichkeit und Integrität der Daten gewährleistet wird und dass jegliche Transaktionen protokolliert werden müssen. Dies stellt eine direkte Forderung für Audit-Trails und Berechtigungskontrollen dar.
+  \item Weitergabekontrolle: Beim Transport von personenbezogenen Daten muss die Vertraulichkeit und Integrität der Daten gewährleistet sein.Jegliche Transaktionen müssen protokolliert werden. Dies stellt eine direkte Forderung für Audit-Trails und Berechtigungskontrollen dar.
   \item Eingabekontrolle: Bei der Erfassung von personenbezogenen Daten muss die Nachvollziehbarkeit des Ursprungs gewährleistet sein. Dies stellt eine direkte Forderung für Audit-Trails dar.
 \end{itemize}
 \paragraph{EU-DSGVO}
