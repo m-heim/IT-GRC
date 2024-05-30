@@ -32,7 +32,7 @@ Clouds]
 - https://www.researchgate.net/profile/Ishaq-Azhar-Mohammed/publication/353889641_Economics_of_Identity_and_Access_Management_Providing_decision_support_for_investments/links/6116a7c11e95fe241acd5514/Economics-of-Identity-and-Access-Management-Providing-decision-support-for-investments.pdf - [Economics of IAM]
 - https://www.proquest.com/docview/2775799672?pq-origsite=gscholar&fromopenview=true&sourcetype=Scholarly%20Journals - [Identity and Access Management: High-level Conceptual Framework]
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5197377 - [Using Modelling and Simulation for Policy Decision Support in Identity Management]
-- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7086972 - [User Identity and Access Management Trends in IT Infrastructure- An Overview]
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7086972 - [User Identity and Access Management Trends in IT Infrastructure- An Overview] - [Definitions]
 - https://www.iaras.org/iaras/filedownloads/ijems/2022/007-0036(2022).pdf - [Customer Identity and Access Management (CIAM): An overview of the main technology vendors]
 - https://www.theseus.fi/bitstream/handle/10024/505780/Anand_Niharika.pdf?sequence=2&isAllowed=y - [Role of IAM in an Organization]
 - https://link.springer.com/article/10.1007/s11623-006-0139-9 - [Digitale Identitäten - Überblick und aktuelle Trends]
@@ -53,6 +53,10 @@ Clouds]
 - https://dspace.bracu.ac.bd/xmlui/bitstream/handle/10361/17566/22141060%2c%2022141064%2c%2022141049_CSE.pdf?sequence=1&isAllowed=y - [A Multi-Layer Security System for Data Access Control, Authentication, and Authorization] - [Definitions, IDaaS]
 - https://www.proquest.com/docview/2775799672?pq-origsite=gscholar&fromopenview=true&sourcetype=Scholarly%20Journals - [Identity and Access Management: High-level Conceptual Framework] - [Concept, Definitions, Framework]
 - https://d1wqtxts1xzle7.cloudfront.net/33445363/023_2011-08_Optimizing_IAM_Frameworks-libre.pdf?1397215360=&response-content-disposition=inline%3B+filename%3DOptimizing_Identity_and_Access_Managemen.pdf&Expires=1716989785&Signature=R9NdhRsapLKJOAvJQ1Csd6yrAB9l7dLgy9DL~vDA4ZQCpfZXFJPi7S27EoHVA7DKDs2fpzS-sHwxydcJOd3M5jybgBuugTGWE4A1BwkZaE~VTfOjOOC-67t89af6u9KAFD~Ou5kheqbTrTsZjce4PR~yyIfGWD4i2W0MtFJvOAoJN7ODI7Ya2wHhqqOvKtv34GJ-ZbHB5rLArFjPtAzwt5bz1rqcwuYHt2mr-xLG8NKjsJGnhaZ-5TxUUqUCKVTNbeIQ6dfc2EX10X-eyii5uELIzn7P-LE7-0lNpjheNs-THK7oOqSeW-059qA3d0RTTjVOITh4G24eNP0njq61fg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA - [Optimizing IAM Frameworks]
+- https://www.jacn.net/vol3/158-IS009.pdf - [Systematic Review of Identity Access Management in Information Security] - [Taxonomy]
+- https://link.springer.com/chapter/10.1007/978-3-642-03829-7_3 - [Federate Identity Management] - [Definition, Identity, IdM]
+- https://pdf.sciencedirectassets.com/305941/1-s2.0-S2215098618X00068/1-s2.0-S2215098617316750/main.pdf - [Good source]
+- https://www.researchgate.net/profile/U-Hariharan/publication/342215946_Safety_measures_for_EHR_systems/links/626a208105d79a3968a769c4/Safety-measures-for-EHR-systems.pdf#page=84
 
 ## Economics of IAM
 - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b556abe34f19d5df5ce551ce023ffecda6f76429 - [Economics of Identity and Access Management: a Case Study on Enterprise Business Services]
@@ -107,6 +111,8 @@ Clouds]
 ## Technical standards
 - https://www.okta.com/identity-101/whats-the-difference-between-oauth-openid-connect-and-saml/ - [What’s the Difference Between OAuth, OpenID Connect, and SAML?]
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7998280 - [SAML, OAuth, OIDC]
+- https://link.springer.com/article/10.1186/s40294-014-0005-9 - [SAML, OAuth, OIDC]
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7956534 - [SAML, OAuth, OIDC]
 ### OpenID
 - https://www.sciencedirect.com/science/article/pii/S0167404818312781
 
@@ -115,3 +121,6 @@ Clouds]
 
 ## CIAM
 - https://www.iaras.org/iaras/filedownloads/ijems/2022/007-0036(2022).pdf - [Customer Identity and Access Management (CIAM): An overview of the main technology vendors]
+
+## Federated Identity
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7395570 - [Federated Identity Management (FIM): Challenges and Opportunities]

@@ -85,7 +85,7 @@ Die systematische Unterteilung von Identitäts- und Berechtigungsmanagement erwe
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 % fertig
 \begin{itemize}
-  \item Die Nutzung von Identitäts- und Berechtigungsmanagement spielt eine zentrale Rolle im unternehmensweiten Risikomanagement. Durch die Steuerung welche logischen Identitäten auf welche Ressourcen zugreifen kann können eine Vielzahl an beabsichtigter und unbeabsichtigter Sicherheitsrisiken minimiert werden.
+  \item Die Nutzung von Identitäts- und Berechtigungsmanagement spielt eine zentrale Rolle im unternehmensweiten Sicherheitsmanagement. Durch die Steuerung welche logischen Identitäten auf welche Ressourcen zugreifen kann können eine Vielzahl an beabsichtigter und unbeabsichtigter Sicherheitsrisiken minimiert werden.
   \item Das Identitäts- und Berechtigungsmanagement ist ein tiefgreifendes Thema in der IT-Governance und besteht aus verschiedenen Prozessen, Technologien und Gesetzen welche im Kontext der gesamten Unternehmenstätigkeiten betrachtet werden müssen.
 \end{itemize}
 \section{Methoden, Technologien und Tools}
@@ -106,10 +106,23 @@ Eine speziell für Identitätsmanagement erstellte Norm ist die ISO/IEC 24760. H
 %fertig
 Das National Institute of Standards and Technology (NIST) publizierte die \glqq{}NIST Special Publication 800-53A - Assessing Security and Privacy Controls in Information Systems and Organizations\grqq{}. Dieses Dokument stellt Prozesse und Methoden für die Bewertung von Sicherheits- und Datenschutzmaßnahmen vor. Im Kapitel \glqq{}Security and Privacy Assessment Procedures\grqq{} wird im Unterkapitel 4.1 \glqq{}Access Control Family (AC)\grqq{} auf Zugangskontrolle und im Unterkapitel 4.7 \glqq{}Identification and Authentication Family (IA)\grqq{} auf Identifizierung und Authentifizierung eingegangen. (vgl. \cite{nist202280053a})
 \subsection{Methoden}
-\paragraph{Föderierte Identität}
+\paragraph{Föderiertes Identitätsmanagement}
+Föderiertes Identitätsmanagement (FIdM) ist eine Lösung für fragmentierte Identitätsinformationen. So hatte in der Vergangenheit jeder Service einen eigenen Identitätsprovider. Dies führt zu schlecht zu wartenden Identitätsinformationen und Sicherheitsproblemen denn die Anzahl der Sicherheitsrisiken wächst mit der redundanten Speicherung der Informationen. Aus diesem Grund wurde das Konzept der Föderierten Identität eingeführt. Hierbei werden sogenannte \glqq{}trust relationships\grqq{} unter Identity Providern (IdP) und Service Providern (SP) beschlossen um eine zentrale Verwaltung von Identitäten umzusetzen. Dieser Sachverhalt ist in \cref{fig:fidm} dargestellt. (vgl. \cite{cantor2003liberty} Seite 4-6)
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/federated.png}
+  \caption{Föderiertes Identitätsmanagement - Basierend auf Grafik 2 aus Liberty ID-FF Architecture Overview von Scott Cantor, Jeff Hodges, John Kemp und Peter Thompson}\label{fig:fidm}
+\end{figure}
 \paragraph{Single Sign On}
+Single Sign On (SSO) ist ein auf FIdM basierendes Konzept. Hierbei werden nach einmaliger Authentifizierung bei einem Service Provider im Rahmen einer Identitätsföderation automatisiert die Authentifizierungsinformationen lokal gespeichert. Wenn der Nutzer anschließend einen anderen Service Provider nutzen möchte wird dieser automatisch authentifiziert, dies führt zu einer besseren Nutzerfreundlichkeit. (vgl. \cite{cantor2003liberty} Seite 23-24)
 \paragraph{Multi Faktor Authentifizierung}
-\paragraph{Rollenbasierte Zugriffskontrolle}
+Es gibt 3 verschiedene Arten von Informationen die für die Authentifizierung verwendet werden können. So z.B. Wissen, Besitz oder Biometrie. Die Unterscheidung der Faktoren ist in \cref{fig:mfa} dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{assets/mfa.png}
+  \caption{Faktoren zum Identitätsnachweis - Basierend auf Grafik 1 aus Multi-Factor Authentication: A Survey von Aleksandr Ometov 1, Sergey Bezzateev, Niko Mäkitalo, Sergey Andreev, Tommi Mikkonen und Yevgeni Koucheryavy}\label{figure:mfa}
+\end{figure}
+In der Vergangenheit wurde meistens nur eine Ein-Faktor Authentifizierung durchgeführt, d.h. eine Person musste eine Chipkarte oder ein Passwort zur Authentifizierung vorweisen. Mit steigenden Bedenken der Sicherheit ging dieser Ansatz in Richtung der Mehr-Faktor Authentifizierung über. So verwenden viele Anwendungen heutzutage 2 oder sogar 3 Faktoren. Dies erhöht die Sicherheit der Anwendungen signifikant. (vgl. \cite{ometov2018multi} Seite 1-4)
 \subsection{Prozesse}
 \paragraph{Identitäts Lebenszyklus}
 %fertig
@@ -146,31 +159,44 @@ Ein zentraler Prozess welcher im Rahmen des Identitätsmanagements definiert und
   \item Audit-Trail: Jegliche Transaktionen bezüglich Zugriff, Änderung oder Weitergabe von Identitätsinformationen sollten aufgezeichnet werden um die Rückverfolgbarkeit zu gewährleisten.
 \end{itemize}
 \paragraph{Audit}
+Ein weiterer zentraler Prozess im Identitäts- und Berechtigungsmanagement ist die Auditierung des Ist-Zustands. Hierbei müssen verschiedenste Prozesse im Unternehemen dokumentiert und anschließend auf Konformität geprüft werden um Abweichungen vom Soll-Zustand zu identifizieren. Dabei muss auf verschiedenste Aspekte eingegangen werden, von diesen sind im Folgenden einige aufgeführt. (vgl. \cite{devlekar2022identity} Seite 397-398, \cite{tsolkas2017} Seite 123-124, 193, 204. \cite{haag2012selecting} Seite 8)
+\begin{itemize}
+  \item Sicherstellung der Funktionstrennung
+  \item Analyse der Audit-Logs (Änderungen an Identitäten und Berechtigungen)
+  \item Compliance mit Standards und Gesetzen
+  \item Sicherheit der involvierten Technik
+\end{itemize}
 \subsection{Technologien}
 Es existieren einige standardisierte Technologien die im Kontext vom Identitäts- und Berechtigungsmanagement eingesetzt werden.
 \paragraph{SAML}
-SAML ist ein weit verbreiteter Standard zur Umsetzung von Sicherheits-Assertationen. Mit SAML wird ein XML Format definiert welches zur Authentifizierung und Authorisierung von Nutzern verwendet werden kann. Im Kontext von SAML werden verschiedene Begrifflichkeiten definiert.~\cite{hughes2005security}
+SAML ist ein weit verbreiteter Standard zur Umsetzung von Sicherheits-Assertationen im Kontext von Identitätsföderationen. Mit SAML wird ein XML Format definiert welches zur Authentifizierung und Authorisierung von Nutzern verwendet werden kann. Im Kontext von SAML werden verschiedene Begriffe definiert. (vgl. \cite{hughes2005security} Seite 5-10)
 \begin{itemize}
   \item Assertation - Eine Assertation über die Charakteristiken und Attribute eines Subjekts. So z.B. die Zugehörigkeit zu einer Gruppe oder der Besitz eines Attributs.
   \item Identity Provider (IdP) - Der Server der für die eigentliche Bearbeitung der Assertation zuständig ist. Er erhält die Anfrage und leitet die Antwort an den Service Provider weiter.
   \item Service Provider (SP) - Das Ziel der Authentifizierung/Authorisierung, dieser stellt eine Ressource/Service zur Verfügung.
 \end{itemize}
 \paragraph{OAuth}
-OAuth ist eine verbreiteter Standard zur delegierten Zugriffskontrolle welcher in RFC 6749 definiert wird. OAuth ist ein Framework welches das Problem der Autorisierung Dritter lößt. Somit müssen keine sensiblen Informationen wie Passwörter mit Dritten geteilt werden um ihnen Zugriff auf eine Ressource zu geben. Im Kontext des Standards werden folgende Begriffe definiert.
+OAuth ist eine verbreiteter Standard zur delegierten Zugriffskontrolle welcher in RFC 6749 definiert wird. Das Ziel hierbei ist das Problem der Autorisierung Dritter zu lösen. Somit müssen keine sensiblen Informationen wie Passwörter mit Dritten geteilt werden um ihnen Zugriff auf eine Ressource zu geben. Im Kontext des Standards werden folgende Begriffe definiert.
 \begin{itemize}
   \item Ressourcenbesitzer - Eine Entität welche die Ressource besitzt und Zugriff gewähren kann
   \item Ressourcenserver - Ein Server welcher die Ressource hostet und auf Anfragen mittel Zugriffstokens reagieren kann
   \item Klient - Eine Anwendung welcher für Ressourcen authorisiert ist und Anfragen an den Ressourcenserver senden kann
   \item Authorisierungsserver - Ein Server welcher Zugriffstokens im Name des Ressourcenbesitzers an den Klient ausstellen kann
 \end{itemize}
-Der Ablauf des Protokolls ist in Grafik~\cref{fig:oauth} abgebildet.~\cite{rfc6749}
+Der Ablauf des Protokolls ist in Grafik~\cref{fig:oauth} abgebildet. (vgl. \cite{rfc6749})
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{assets/oauth.png}
   \caption{Protokoll OAuth 2.0 - Basierend auf RFC 6749}\label{fig:oauth}
 \end{figure}
 \paragraph{OpenID}
-OpenID Connect (OIDC) ist ein auf OAuth 2.0 basierender Standard für föderierte Authentifizierung welches die veraltete OpenID 2.0 Spezifikation ablößt. Somit kann im Rahmen des Identitätsmanagements ein zentraler OpenID Provider (OP) über ein REST API zur Authentifizierung und SSO eingesetzt werden.~\cite{naik2017choice}
+OpenID Connect (OIDC) ist ein auf OAuth 2.0 basierender Standard für föderierte Authentifizierung welches die veraltete OpenID 2.0 Spezifikation ablößt. Somit kann im Rahmen des Identitätsmanagements ein zentraler OpenID Provider (OP) über ein REST API zur Authentifizierung und SSO eingesetzt werden. (vgl. \cite{naik2017choice} Seite 6-9)
+\paragraph{Einordnung SAML, OAuth, OIDC}
+\begin{itemize}
+  \item SAML und OIDC werden beide als Technologie für Authentifizierung und Authorisierung im Kontext von FIdM eingesetzt, beide Ermöglichen die Umsetzung von SSO. SAML wird hierbei eher im Unternehmenkontext und OIDC im Konsumentenkontext verwendet
+  \item OAuth wird für die Authorisierung Dritter im Kontext von FIdM genutzt
+\end{itemize}
+(vgl. \cite{naik2017choice})
 \subsection{Tools}
 IAM Lösungen ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM. Zur konkreten Umsetzung in Organisationen gibt einige quelloffene Lösungen und von den großen Technologiekonzernen wie Microsoft, SAP, IBM, Oracle werden kommerzielle Lösungen angeboten. Im Folgenden werden quelloffene und kommerzielle Produkte vorgestellt welche bei der Umsetzung von CIAM und IAM verwendet werden können.
 \paragraph{Shibboleth}
@@ -187,8 +213,9 @@ SAP bietet mit dem Produkt \glqq{}SAP Cloud Identity Access Governenace\grqq{} e
 Das Unternehmen Okta Inc. ist ein in den USA ansässiges Unternehmen welches sich auf IAM spezialisiert hat. Mit rund 6000 Mitarbeitern und mehr als einer Milliarde US-Dollar an Umsatz ist es ein führender Hersteller von IAM Produkten. Vom Unternehmen werden 2 Produkte angeboten. Customer Identity Cloud und Workforce Identity Cloud. Customer Identity Cloud ist eine Lösung zum Customer Identity Management, d.h. es ermöglicht die sichere Verwaltung und Authentifizierung von Kunden-Identitäten. Workforce Identity Cloud ist eine Lösung zum Unternehmensinternen Identitäts- und Berechtigungsmanagement.
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 \begin{itemize}
-  \item Im Rahmen von Normen wie der ISO 27001 spielt die Umsetzung von IAM eine zentrale Rolle.
+  \item Im Rahmen von Normen wie der ISO 27001 spielt die Umsetzung von Identitäts- und Berechtigungsmanagement eine zentrale Rolle.
   \item Professionelle IAM Lösungen können durch eine Vielzahl an Funktionalitäten dazu beitragen Identitäts- und Berechtigungsmanagement effizient umzusetzen.
+  \item Es existiert eine Vielzahl an Technologien welche eine interoperable Umsetzung von Identitäts- und Berechtigungsmanagement ermöglichen
 \end{itemize}
 \section{Betriebliches Identitäts- und Berechtigungsmanagement}
 \label{sec:betrieb}
@@ -208,7 +235,7 @@ Der Helpdesk ist im Unternehmen eine zentrale Anlaufstelle für Probleme mit der
 Eine Zentrale Rolle im Identity Life Cycle spielt die Personalabteilung. Dieses ist für die erstmalige Erstellung der Identitäten, der Ausgabe von Authentifizierungsinformationen, der Vergabe von Rollen für rollenbasierte Zugriffskontrolle und der Deprovisionierung bei Beurlaubung und Kündigung zuständig. (vgl. \cite{mohammed2017systematic} Seite 3) So bietet z.B. Microsoft Entra ID oder Okta Workforce Identity eine direkte Integration von HR Anwendungen in den Identitäts Lebenszyklus an. (vgl. \cite{oktahr}, \cite{Billmath2024})
 \subsection{Technische Aspekte}
 %fertig
-Für die Umsetzung von Identitäts- und Berechtigungsmanagement im Betrieb bieten sich die Lösungen der namhaften Hersteller wie Microsoft, SAP oder Okta an. Dies sind ausgereifte Lösungen mit einer Vielzahl an Funktionalitäten die die Umsetzung des Identitäts- und Berechtigungsmanagements unterstützen. Während der traditionelle Ansatz die Nutzung von On-Premise Services war bewegt sich die IAM Industrie in Richtung von SaaS Modellen. Im Kontext von IAM werden diese Lösungen als IDaaS bezeichnet. (vgl. \cite{kunz2014analyzing} Seite 274)
+Für die Umsetzung von Identitäts- und Berechtigungsmanagement im Betrieb bieten sich die Lösungen der namhaften Hersteller wie Microsoft, SAP oder Okta an. Dies sind ausgereifte Lösungen mit einer Vielzahl an Funktionalitäten die die Umsetzung des Identitäts- und Berechtigungsmanagements unterstützen. Während der traditionelle Ansatz die Nutzung von On-Premise Services war bewegt sich die IAM Industrie in Richtung von SaaS Modellen. Im Kontext von IAM werden diese Lösungen als IDaaS bezeichnet. (vgl. \cite{kunz2014analyzing} Seite 274, \cite{tsolkas2017} Seite 223-224)
 \subsection{Wirtschaftliche und rechtliche Aspekte}
 Die Signifikanz von Identitäts- und Berechtigungsmanagement in Unternehmen tiefgreifend. Es lassen sich mehrere Aspekte identifizieren. Unter anderem Security, Produktivität, Compliance, Wettbewerbsvorteil durch Zertifizierungen und Kundenerlebnis. Diese Aspekte sind im Folgenden aufgeführt.
 \paragraph{Security}
@@ -216,7 +243,7 @@ Die Signifikanz von Identitäts- und Berechtigungsmanagement in Unternehmen tief
 Die wirtschaftlichen Schäden durch Datendiebstahl und unautorisierte Kontrolle sind immens und steigen stetig. (vgl. \cite{furnell2020understanding} Seite 154) Wenn ein Mitarbeiter eine Vielzahl an Passwörtern für die unternehmensinternen/unternehmensexternen Dienste verwalten muss kann dies zur unsachgemäßen Handhabung führen - so z.B. Notizen mit Passwörtern oder die Verwendung von schwachen Passwörtern, dies erhöht die Wahrscheinlichkeit von Sicherheitrisiken. (vgl. \cite{haag2012selecting} Seite 6-8) Im Jahr 2017 fiel Deloitte einem Cyberangriff zum Opfer. Hierbei wurden sensible Daten geklaut. Grund für den Cyberangriff war ein Administratoraccount ohne Zugriffsbeschränkungen welcher nur mittels Passwort, ohne MFA geschützt war. (vgl. \cite{deloitte2017}) Mittels fest definierter Prozesse des Identitäts Lebenszyklus und der Zugriffssteuerung und Auditierung dieser können Risiken für ähnliche Angriffe minimiert werden.
 \paragraph{Produktivität}
 %fertig
-Im vorherigen Abschnitt wurde die sicherheitstechnische Signifikanz von Identitäts- und Berechtigungsmanagement aufgezeigt. Dies kann jedoch einen negativen Einfluss auf die Produktivität von Mitarbeitern haben. So führt z.B. die Verwendung von mehreren verschiedenen Systemen, alle mit unterschiedlichen Authentifizierungsverfahren dazu dass Mitarbeiter verschiedene Passwörter verwalten müssen oder sich in jedem System separat authentifizieren müssen.~\cite{radha2012survey}\cite{haag2012selecting} Ein weiterer Aspekt sind vergessene Passwörter mit Unterbrechungen im Arbeitsablauf und hohem Helpdesk aufwand. Mit der Anwendung von SSO Verfahren lässt sich dieser Aufwand auf ein Minimum reduzieren.~\cite{thakur2015user} Während die Umsetzung des Principle of Least Privilege wünscheswert ist können schlecht konfigurierte Zugriffsberechtigungen dazu führen dass Mitarbeiter ihre Arbeit unterbrechen müssen um neue Rechte anzufordern. Dies kann unter Umständen zu teuren Verzögerungen im direkten Arbeitsablauf adminstrativer oder operativer Aufgaben führen.~\cite{weishaupl2015towards}
+Im vorherigen Abschnitt wurde die sicherheitstechnische Signifikanz von Identitäts- und Berechtigungsmanagement aufgezeigt. Dies kann jedoch einen negativen Einfluss auf die Produktivität von Mitarbeitern haben. So führt z.B. die Verwendung von mehreren verschiedenen Systemen, alle mit unterschiedlichen Authentifizierungsverfahren dazu dass Mitarbeiter verschiedene Passwörter verwalten müssen oder sich in jedem System separat authentifizieren müssen. (vgl. \cite{radha2012survey} Seite 138, \cite{haag2012selecting} Seite 8-9) Ein weiterer Aspekt sind vergessene Passwörter mit Unterbrechungen im Arbeitsablauf und hohem Helpdesk aufwand. Mit der Anwendung von SSO Verfahren lässt sich dieser Aufwand auf ein Minimum reduzieren. (vgl. \cite{thakur2015user} Seite 2-3, \cite{haag2012selecting} Seite 8-9) ährend die Umsetzung des Principle of Least Privilege wünscheswert ist können schlecht konfigurierte Zugriffsberechtigungen dazu führen dass Mitarbeiter ihre Arbeit unterbrechen müssen um neue Rechte anzufordern. Dies kann unter Umständen zu teuren Verzögerungen im direkten Arbeitsablauf adminstrativer oder operativer Aufgaben führen. (vgl. \cite{weishaupl2015towards} Seite 1-1)
 \paragraph{Kundenerlebnis}
 %fertig
 Im Kontext des Customer IAM führen ungeeignete IAM Lösungen zu erhöhter Komplexität für den Nutzer. Eine strikte Umsetzung von starken Passwörtern oder die Nutzung einer weiteren MFA-App kann für den Kunden abschreckend sein. (vgl. \cite{azhar2014economics} Seite 545, \cite{liveretos2022customer} Seite 472) Somit steigt der Kunde möglicherweise zur Konkurrenz um. Durch das Anbieten von SSO mittels externer Dienste lässt sich die Komplexität und das Risiko von Sicherheitsproblemen reduzieren.
