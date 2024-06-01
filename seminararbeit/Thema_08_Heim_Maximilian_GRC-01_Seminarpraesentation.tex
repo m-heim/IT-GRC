@@ -9,10 +9,18 @@
 \usepackage[%
   backend=bibtex,
   style=numeric]{biblatex}
+\captionsetup{justification=centering}
 \addbibresource{bib.bib}
 \author{Maximilian Heim\inst{1}}
 \beamertemplatenavigationsymbolsempty
 \beamerdefaultoverlayspecification{<+->}
+\AtBeginSubsection[]
+{
+    \begin{frame}
+        \frametitle{Table of Contents}
+        \tableofcontents[currentsection,currentsubsection]
+    \end{frame}
+}
 \usetheme{Madrid}
 \usecolortheme{whale}
 \institute[HS-AS]
@@ -30,7 +38,7 @@
   \frametitle{Gliederung}
   \tableofcontents
 \end{frame}
-\section{Identitätsmanagement}
+\section{Identitätsmanagement- und Berechtigungsmanagement}
 \subsection{Identitätsmanagement}
 \begin{frame}
   \frametitle{Identität im Kontext des Identitätsmanagements}
@@ -50,8 +58,6 @@
     \caption{Digitale Identität - Basierend auf Grafik 2.1 aus \glqq{}Identity Management Concepts, Technologies, and Systems\grqq{} von Elisa Bertino und Kenji Takahashi}
   \end{figure}
 \end{frame}
-
-\subsection{Identitätsmanagement}
 \begin{frame}
   \frametitle{Identitätsmanagement}
   \begin{itemize}
@@ -70,6 +76,29 @@
   \end{figure}
 \end{frame}
 
+\begin{frame}<4->
+  \frametitle{Identitätslebenszyklus}
+  \begin{columns}
+    \begin{column}{0.7\textwidth}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{assets/idlc.png}
+        \caption{Identitätslebenszyklus - Basierend auf Grafik 2.3 aus \glqq{}Identity Management Concepts, Technologies, and Systems\grqq{} von Elisa Bertino und Kenji Takahashi}\label{fig:idlc}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \begin{itemize}
+        \item Geburt: Datensammlung und Validierung, Zugangsdaten
+        \item Leben: Authentifizierung, Weitergabe
+        \item Änderung: Änderungen, Zugangsdaten
+        \item Tod: Kündigung, Löschung
+        \item Governance: Richtlinien, Audit-Trail
+      \end{itemize}
+
+    \end{column}
+  \end{columns}
+\end{frame}
+
 \subsection{Berechtigungsmanagement}
 \begin{frame}
   \frametitle{Berechtigung}
@@ -85,23 +114,22 @@
   \end{itemize}
 \end{frame}
 
-\subsection{Berechtigungsmanagement}
 \begin{frame}
   \frametitle{Berechtigungsmanagement}
   \begin{itemize}
     \item Management von Berechtigungen: Welche Nutzer oder IT-Systeme (digitale Identitäten) dürfen auf welche Ressourcen zugreifen?
     \item Aufgaben:
           \begin{itemize}
-            \item Wie werden Berechtigungen vergeben und entzogen?
-            \item Wie werden Berechtigungen effizient systematisiert um ?
+            \item Wie werden Berechtigungen unterteilt? (Berechtigungskonzept - RBAC, ABAC, Kombination)
+            \item Wie werden Berechtigungen vergeben und entzogen, wie werden irreguläre Berechtigungen vergeben?
             \item Wie werden Berechtigungskontrollen technisch umgesetzt? (Authorisierung)
           \end{itemize}
   \end{itemize}
 \end{frame}
 
-\subsection{Identitäts- und Berechtigungsmanagement-System}
+\subsection{Identitäts- und Berechtigungsmanagement}
 \begin{frame}
-  \frametitle{Identitäts- und Berechtigungsmanagement-System}
+  \frametitle{Identitäts- und Berechtigungsmanagement-Systeme}
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{assets/accessmanagement2.png}
@@ -110,6 +138,7 @@
 \end{frame}
 
 \section{Betriebliches Identitäts- und Berechtigungsmanagement}
+
 \subsection{Operative Aspekte}
 \begin{frame}
   \frametitle{Operative Aspekte}
@@ -120,6 +149,32 @@
     \item Personalabteilung: Identity-Lifecycle Management
     \item Helpdesk: Hilfe bei Authentifizierung und Authorisierung
   \end{itemize}
+\end{frame}
+
+\subsection{Technische Aspekte}
+\begin{frame}
+  \frametitle{Technische Aspekte}
+  \begin{itemize}
+    \item Produkte von Konzernen wie Microsoft, SAP, IBM, Okta \ldots
+          \begin{itemize}
+            \item Cloud (IDaaS - Identity as a Service) - On Premise
+            \item Automatisiertes Lifecycle Management
+            \item Multi Faktor Authentifizierung, Single Sign On, automatisierte Risikobewertung von Zugriffen
+            \item Integration verschiedenster Dienste wie Active Directory, Microsoft Office, AWS, HR Anwendungen
+            \item \ldots
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Technische Aspekte}
+  \begin{figure}[H]
+    \centering
+    \includegraphics<1>[width=0.9\textwidth]{assets/Entra.png}
+    \includegraphics<2>[width=0.9\textwidth]{assets/Verify.png}
+    \includegraphics<3>[width=0.75\textwidth]{assets/Workforce.png}
+    \caption{\only<1>{Microsoft Entra ID - von \url{https://www.microsoft.com/de-de/security/business/microsoft-entra}}\only<2>{IBM Security Verify - von \url{https://www.ibm.com/de-de/products/verify-saas}}\only<3>{Okta Workforce Identity Cloud - von \url{https://thectoclub.com/tools/best-identity-and-access-management-solutions/}}}
+  \end{figure}
 \end{frame}
 
 \subsection{Compliance}
@@ -141,6 +196,14 @@
     \item IT-Grundschutz: BSI-Standard 200-1, ORP.4
     \item NIST 800-53A: Kapitel Access Control Family (AC) und Identification and Authentication Family (IA)
     \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Fragen}
+  \begin{itemize}
+    \item Vielen dank für eure Aufmerksamkeit!
+    \item Fragen?
   \end{itemize}
 \end{frame}
 
