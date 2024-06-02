@@ -281,12 +281,12 @@ Die DSGVO stellt verschiedenste Forderungen für die sichere Erhebung, Speicheru
 \section{Fazit}
 \subsection{Zusammenfassung}
 \subsection{Beantwortung der Forschungsfragen}
-\paragraph{Identität und Identitätsmanagement}
-Eine (digitale) Identität ist eine Menge von Attributen und Rollen, inklusive Bezeichner und Zugangsdaten zur Authorisierung. So kann eine Identität eine Person, ein IT-System oder eine Anwendung darstellen. Eine Identität kann einer Entität, also einer Person oder einer Organisation zugeordnet werden. Das Identitätsmanagement ist zuständig für die Festlegung von Prozessen zur Verwaltung, Authentifizierung und Überwachung von Identitäten.
-\paragraph{Berechtigung und Berechtigungsmanagement}
-Eine Berechtigung ist eine Kombination aus zu berechtigender Ressource und zu berechtigender Operation auf diese Ressource. Berechtigungsmanagement bezeichnet die Prozesse für die Zuweisung, Kontrolle, Überwachung und Entzug von Berechtigungen sowie der Überwachung dieser Prozesse.
+\paragraph{Was versteht man unter den Begriffen \glqq{}Identität\grqq{} sowie \glqq{}Identitätsmanagement\grqq{} und welche Zielstellung wird dabei verfolgt?}
+Eine (digitale) Identität ist eine Menge von Attributen und Rollen, inklusive Bezeichner und Zugangsdaten zur Authentifikation. So kann eine Identität eine Person, ein IT-System oder eine Anwendung darstellen. Eine Identität kann einer Entität, also einer Person oder einer Organisation zugeordnet werden. Das Identitätsmanagement ist zuständig für die Festlegung von Prozessen zur Verwaltung, Authentifizierung und Überwachung von Identitäten. Das Ziel des Identitätsmanagements ist die systematische Speicherung von Attributen und Authentifikation von physischen Identitäten.
+\paragraph{Was versteht man unter den Begriffen \glqq{}Berechtigung\grqq{} sowie \glqq{}Berechtigungsmanagement\grqq{} und welche Zielstellung wird dabei verfolgt?}
+Eine Berechtigung ist eine Kombination aus zu berechtigender Ressource und zu berechtigender Operation auf diese Ressource. Berechtigungsmanagement bezeichnet die Prozesse für die Zuweisung, Kontrolle, Überwachung und Entzug von Berechtigungen. Das Ziel des Berechtigungsmanagements ist die Zugangs-, Zugriffs- und Zutrittskontrolle von schützenswerten Ressourcen.
 \paragraph{Welche Standards, Methoden, Technologien und Tools lassen sich differenzieren?}
-Die ISO 27001 Norm in Kombination mit dem IT-Grundschutz des BSI's stellt einen Goldstandard in der Informationssicherheit in Organisationen dar. Ein wichtiger Aspekt einer ISO 27001 Zertifizierung ist die Zugriffskontrolle.  Es haben sich einige standardisierte Verfahren zur Umsetzung von Identitäts- und Berechtigungsmanagement etabliert, so z.B. SAML, OAuth, OpenID Connect. Es gibt eine Vielzahl an Anbietern welche IAM Lösungen anbieten. Beispiele für große Hersteller sind Microsoft, IBM, SAP und Okta.
+Es lassen sich verschiedenste Normen wie die ISO 27001, der IT-Grundschutz oder die NIST SP 800-53A im Kontext des Identitäts- und Berechtigungsmanagements identifizieren. Diese geben etablierte Methodiken zu Umsetzung von Identitäts- und Berechtigungsmanagement an. Es haben sich einige standardisierte Verfahren zur Umsetzung von Identitäts- und Berechtigungsmanagement etabliert, so z.B. SAML, OAuth und OpenID Connect. Es gibt eine Vielzahl an Softwarelösungen zum Identitäts- und Berechtigungsmanagement, so gibt es z.B. das quelloffene Shibboleth Softwarepaket oder kommerzielle Lösungen, so z.B. von Microsoft, IBM, SAP und Okta.
 \paragraph{Welche Aufgaben und Prozesse sind im Kontext von Identitäts- und Berechtigungsmanagement zu bearbeiten?}
 Die grundlegenden Aufgaben und Prozesse des Identitäts- und Berechtigungsmanagements sind:
 \begin{itemize}
@@ -296,10 +296,14 @@ Die grundlegenden Aufgaben und Prozesse des Identitäts- und Berechtigungsmanage
   \item Auditierung aller Prozesse zur Identifikation von Abweichungen und Speicherung von Informationen im Rahmen der Rückverfolgbarkeit von Transaktionen
 \end{itemize}
 \paragraph{Welche betrieblichen Anwendungsfälle zeigen die Bedeutung des Identitäts und Berechtigungsmanagements auf?}
+\begin{itemize}
+  \item Die zentralisierte und systematische Speicherung von Identitätsinformationen im Zuge der Authentifikation, Nutzung im Rechnungswesen, der Rückverfolgbarkeit etc.
+  \item Dem Schutz von Ressourcen im Rahmen der Informationssicherheit
+\end{itemize}
 \paragraph{Wie wird das Identitäts und Berechtigungsmanagement im Kontext der Sicherheit in der Informationstechnik eingesetzt?}
 Das Identitäts- und Berechtigungsmanagement wird eingesetzt um Zugriffe auf schützenswerte Ressourcen einzuschränken. Dies geschieht durch geeignete Authentifizierungs und Authorisierungsverfahren.
 \paragraph{Zuständigkeit für Identitäts- und Berechtigungsmanagement}
-Für die Planung und Umsetzung der Prozessen des Identitäts- und Berechtigungsmanagements ist im Unternehmen der CIO verantwortlich. Dieser wird ggf. durch den CISO unterstützt denn Identitäts- und Berechtigungsmanagement ist ein sicherheitskritischer Prozess. Operativ involviert sind die Personalverwaltung und der Helpdesk. Die Personalverwaltung ist zuständig für die Erstellung, Änderung und Löschung von Identitäten und Rollen. Der Helpdesk ist die Anlaufstelle für Probleme bei der Nutzung von Identitäts- und Berechtigungsmanagement-Systemen und bei Incidents.
+Für die Planung und Umsetzung der Prozessen des Identitäts- und Berechtigungsmanagements ist im Unternehmen der CIO verantwortlich. Dieser wird ggf. durch den CISO unterstützt denn Identitäts- und Berechtigungsmanagement ist ein sicherheitskritischer Prozess. Operativ involviert ist der IT-Betrieb, die Personalverwaltung und der Helpdesk. Der IT-Betrieb ist zuständig für die Implementierung und Wartung der involvierten Technik, die Personalverwaltung ist zuständig für die Erstellung, Änderung und Löschung von Identitäten und Rollen. Der Helpdesk ist die Anlaufstelle für Probleme bei der Authentifizierung und Authorisierung.
 \newpage
 \section{Eidesstattliche Versicherung}
 \newpage
