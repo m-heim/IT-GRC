@@ -10,20 +10,34 @@
 \title{Identitäts- und Berechtigungsmanagement \\ \large{}Aufgabenblatt mit Lösungen}
 \begin{document}
 \maketitle
-\section*{Aufgabe 1: SSO}
-Was sind die Vorteile und Anwendungsbereiche von Single Sign On?
+\section*{Aufgabe 1: Digitale Identität}
+Was ist eine digitale Identität? Woraus setzt sie sich zusammen?
+\subsection*{Antwort}
+Eine digitale Identität repräsentiert eine Person, ein IT-System, eine Organisation etc. . Eine digitale Identität besteht aus:
+\begin{itemize}
+    \item Bezeichner: Eindeutige Identifikation z.B. Nutzername, E-Mail Addresse, Matrikelnummer
+    \item Zugangsdaten: Daten zur Authentifizierung, so z.B. Passwort, Zertifikat oder Biometrischen Daten
+    \item Attribute: Daten die die physische Identität repräsentieren, so z.B. Name, Wohnort, Rolle im Unternehmen
+\end{itemize}
 
-\section*{Aufgabe 2: Rechtliche Aspekte IAM vs. CIAM}
+\section*{Aufgabe 2: Föderiertes Identitätsmanagement}
+Was ist Föderiertes Identitätsmanagement?
+\subsection*{Antwort}
+Die zentralisierte, nicht redundante Speicherung von Identitätsinformationen. Dies bildet eine Identitätsföderation, d.h. eine Menge an Service Providern (SP) und einem Identity Provider (IdP). Die Service Provider haben mit dem Identity Provider sogenannte Trust Relationships. Somit muss nicht jeder Service Provider die Identitätsdaten separat speichern. Dies führt zu verbesserter Datenintegrität und Sicherheit.
+
+\section*{Aufgabe 3: Rechtliche Aspekte IAM vs. CIAM}
 Wie unterscheiden sich die Rechtlichen Anforderungen im Rahmen des IAM's von denen des CIAM's?
-\subsection{Antwort}
+\subsection*{Antwort}
+
 Im Rahmen des internen Identitäts- und Berechtigungsmanagements spezifizieren z.B. KonTraG, GoBD, EuroSOX und EU-DSVGO/BDSG Anforderungen an das Identitäts- und Berechtigungsmanagement. Im Rahmen des CIAM's spezifiziert die EU-DSGVO und das BDSG sehr zentrale Anforderungen.
 
-\section*{Aufgabe 3: Organisatorische Rollen}
+\section*{Aufgabe 4: Organisatorische Rollen}
 Welche organisatorischen Rollen können im Identitäts- und Berechtigungsmanagement differenziert werden?
-\subsection{Antwort}
-
-\section*{Aufgabe 4: Digitale Identität}
-Was ist eine digitale Identität? Woraus setzt sie sich zusammen?
-\subsection{Antwort}
-
+\subsection*{Antwort}
+\begin{itemize}
+    \item Auf der Führungsebene sind CIO und CISO für die Anforderungen an das System zuständig
+    \item Der IT-Betrieb ist für die Implementierung und Wartung der involvierten IT-Systeme zuständig
+    \item Die Personalabteilung nimmt eine zentrale Rolle im Identitätslebenszyklus ein, hier werden digitale Identitäten erstmals erstellt, geändert und deprovisioniert
+    \item Der Helpdesk ist eine zentrale Anlaufstelle für Probleme bei Authentifizierung und Authorisierung, so z.B. bei vergessenen Passwörtern oder fehlenden Berechtigungen
+\end{itemize}
 \end{document}
