@@ -8,7 +8,9 @@
 \usepackage{fancyvrb}
 \usepackage[%
   backend=bibtex,
-  style=numeric]{biblatex}
+  style=numeric,
+  isbn=false]{biblatex}
+\setbeamerfont{footnote}{size=\tiny}
 \captionsetup{justification=centering}
 \addbibresource{bib.bib}
 \author{Maximilian Heim\inst{1}}
@@ -92,7 +94,7 @@
         \item Leben: Authentifizierung, Weitergabe
         \item Änderung: Änderungen, Zugangsdaten
         \item Tod: Kündigung, Löschung
-        \item Governance: Richtlinien, Audit-Trail
+        \item Governance: Richtlinien, Audit-Trail~\footfullcite{bertino2010identity}
       \end{itemize}
 
     \end{column}
@@ -153,10 +155,10 @@
   \frametitle{Operative Aspekte}
   \begin{itemize}
     \item CIO: Verantworlich für Prozesse und Technologien
-    \item CISO: Bewertung der Prozesse, Überwachung der Compliance mit Datenschutzgesetzen und Sicherheitsstandards, Awareness Trainings, interne Audits...
+    \item CISO: Bewertung der Prozesse, Überwachung der Compliance mit Datenschutzgesetzen und Sicherheitsstandards, Awareness Trainings, interne Audits...~\footfullcite{mont2010economics}
     \item IT-Betrieb: Implementierung und Wartung der involvierten Technik
-    \item Personalabteilung: Identity-Lifecycle Management
-    \item Helpdesk: Hilfe bei Authentifizierung und Authorisierung
+    \item Personalabteilung: Identity-Lifecycle Management~\footfullcite{mohammed2017systematic}
+    \item Helpdesk: Hilfe bei Authentifizierung und Authorisierung~\footfullcite{ylen2004centralized}
   \end{itemize}
 \end{frame}
 
