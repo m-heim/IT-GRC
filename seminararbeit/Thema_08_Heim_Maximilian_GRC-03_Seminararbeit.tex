@@ -92,6 +92,7 @@ Die systematische Unterteilung von Identitäts- und Berechtigungsmanagement erwe
 \label{sec:existing}
 \subsection{Betriebliche Motivation}
 % motiviation für den einsatz von methoden, tools und technologien
+Der Einsatz von eigens entwickelten Methoden, Technologien und Tools birgt eine Vielzahl an Problemen. So z.B. hohe Kosten oder Sicherheitsprobleme. Hierbei ist es von Vorteil auf etablierte Methoden, Technologien und Tools zu setzen. Standardisierte Methoden wie der IT-Grundschutz oder die NIST 800-53A definieren Vorgehensweisen um die Gefahrenlage gezielt zu bewältigen, standardisierte Technologien wie SAML oder OAuth unterstützen die interoperable Implementierung von Identitäts- und Berechtigungsmanagement und ausgereifte Produkte bieten eine ganze Bandbreite an Funktionalitäten. Im Folgenden werden daher einige Methoden, Tools und Technologien vorgestellt.
 \subsection{Standardisierte Methoden}
 \paragraph{BSI}
 %fertig
@@ -116,7 +117,7 @@ Föderiertes Identitätsmanagement (FIdM) ist eine Lösung für fragmentierte Id
 \paragraph{Single Sign On}
 Single Sign On (SSO) ist ein auf FIdM basierendes Konzept. Hierbei werden nach einmaliger Authentifizierung bei einem Service Provider im Rahmen einer Identitätsföderation automatisiert die Authentifizierungsinformationen lokal gespeichert. Wenn der Nutzer anschließend einen anderen Service Provider nutzen möchte wird dieser automatisch authentifiziert, dies führt zu einer besseren Nutzerfreundlichkeit. (vgl. \cite{cantor2003liberty} Seite 23-24)
 \paragraph{Multi Faktor Authentifizierung}
-Es gibt 3 verschiedene Arten von Informationen die für die Authentifizierung verwendet werden können. So z.B. Wissen, Besitz oder Biometrie. Die Unterscheidung der Faktoren ist in \cref{fig:mfa} dargestellt.
+Es gibt 3 verschiedene Arten von Informationen die für die Authentifizierung verwendet werden können. Wissen, Besitz und Biometrie. Die Unterscheidung der Faktoren ist in \cref{figure:mfa} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{assets/mfa.png}
@@ -237,7 +238,7 @@ Eine Zentrale Rolle im Identity Life Cycle spielt die Personalabteilung. Dieses 
 %fertig
 Für die Umsetzung von Identitäts- und Berechtigungsmanagement im Betrieb bieten sich die Lösungen der namhaften Hersteller wie Microsoft, SAP oder Okta an. Dies sind ausgereifte Lösungen mit einer Vielzahl an Funktionalitäten die die Umsetzung des Identitäts- und Berechtigungsmanagements unterstützen. Während der traditionelle Ansatz die Nutzung von On-Premise Services war bewegt sich die IAM Industrie in Richtung von SaaS Modellen. Im Kontext von IAM werden diese Lösungen als IDaaS bezeichnet. (vgl. \cite{kunz2014analyzing} Seite 274, \cite{tsolkas2017} Seite 223-224)
 \subsection{Wirtschaftliche und rechtliche Aspekte}
-Die Signifikanz von Identitäts- und Berechtigungsmanagement in Unternehmen tiefgreifend. Es lassen sich mehrere Aspekte identifizieren. Unter anderem Security, Produktivität, Compliance, Wettbewerbsvorteil durch Zertifizierungen und Kundenerlebnis. Diese Aspekte sind im Folgenden aufgeführt.
+Die Signifikanz von Identitäts- und Berechtigungsmanagement in Unternehmen ist tiefgreifend. Es lassen sich mehrere Aspekte identifizieren. Unter anderem Security, Produktivität, Compliance, Wettbewerbsvorteil durch Zertifizierungen und Kundenerlebnis. Diese Aspekte sind im Folgenden aufgeführt.
 \paragraph{Security}
 %fertig
 Die wirtschaftlichen Schäden durch Datendiebstahl und unautorisierte Kontrolle sind immens und steigen stetig. (vgl. \cite{furnell2020understanding} Seite 154) Wenn ein Mitarbeiter eine Vielzahl an Passwörtern für die unternehmensinternen/unternehmensexternen Dienste verwalten muss kann dies zur unsachgemäßen Handhabung führen - so z.B. Notizen mit Passwörtern oder die Verwendung von schwachen Passwörtern, dies erhöht die Wahrscheinlichkeit von Sicherheitrisiken. (vgl. \cite{haag2012selecting} Seite 6-8) Im Jahr 2017 fiel Deloitte einem Cyberangriff zum Opfer. Hierbei wurden sensible Daten geklaut. Grund für den Cyberangriff war ein Administratoraccount ohne Zugriffsbeschränkungen welcher nur mittels Passwort, ohne MFA geschützt war. (vgl. \cite{deloitte2017}) Mittels fest definierter Prozesse des Identitäts Lebenszyklus und der Zugriffssteuerung und Auditierung dieser können Risiken für ähnliche Angriffe minimiert werden.
@@ -246,7 +247,7 @@ Die wirtschaftlichen Schäden durch Datendiebstahl und unautorisierte Kontrolle 
 Im vorherigen Abschnitt wurde die sicherheitstechnische Signifikanz von Identitäts- und Berechtigungsmanagement aufgezeigt. Dies kann jedoch einen negativen Einfluss auf die Produktivität von Mitarbeitern haben. So führt z.B. die Verwendung von mehreren verschiedenen Systemen, alle mit unterschiedlichen Authentifizierungsverfahren dazu dass Mitarbeiter verschiedene Passwörter verwalten müssen oder sich in jedem System separat authentifizieren müssen. (vgl. \cite{radha2012survey} Seite 138, \cite{haag2012selecting} Seite 8-9) Ein weiterer Aspekt sind vergessene Passwörter mit Unterbrechungen im Arbeitsablauf und hohem Helpdesk aufwand. Mit der Anwendung von SSO Verfahren lässt sich dieser Aufwand auf ein Minimum reduzieren. (vgl. \cite{thakur2015user} Seite 2-3, \cite{haag2012selecting} Seite 8-9) ährend die Umsetzung des Principle of Least Privilege wünscheswert ist können schlecht konfigurierte Zugriffsberechtigungen dazu führen dass Mitarbeiter ihre Arbeit unterbrechen müssen um neue Rechte anzufordern. Dies kann unter Umständen zu teuren Verzögerungen im direkten Arbeitsablauf adminstrativer oder operativer Aufgaben führen. (vgl. \cite{weishaupl2015towards} Seite 1-1)
 \paragraph{Kundenerlebnis}
 %fertig
-Im Kontext des Customer IAM führen ungeeignete IAM Lösungen zu erhöhter Komplexität für den Nutzer. Eine strikte Umsetzung von starken Passwörtern oder die Nutzung einer weiteren MFA-App kann für den Kunden abschreckend sein. (vgl. \cite{azhar2014economics} Seite 545, \cite{liveretos2022customer} Seite 472) Somit steigt der Kunde möglicherweise zur Konkurrenz um. Durch das Anbieten von SSO mittels externer Dienste lässt sich die Komplexität und das Risiko von Sicherheitsproblemen reduzieren.
+Im Kontext des Customer IAM führen ungeeignete IAM Lösungen zu erhöhter Komplexität für den Nutzer. Eine strikte Umsetzung von starken Passwörtern oder die Nutzung einer weiteren MFA-App kann für den Kunden abschreckend sein. (vgl. \cite{azhar2014economics} Seite 545, \cite{liveretos2022customer} Seite 472) Somit steigt der Kunde möglicherweise zur Konkurrenz um. Durch das Anbieten von SSO mittels beliebter externer Dienste (Google, Github, Facebook) lässt sich die Komplexität und das Risiko von Sicherheitsproblemen reduzieren.
 \paragraph{Wettbewerbsvorteil durch Zertifizierungen}
 %fertig
 Zertifizierungen mit Sicherheitsstandards wie der ISO 27001 können zu einem Wettbewerbsvorteil führen denn diese sind für Kunden ein möglicher Indikator für Qualität. (vgl. \cite{dobrin2015quality} Seite 1071-1072) Somit kann die Umsetzung von Identitäts- und Berechtigungsmanagement im Rahmen einer ISO 27001 Zertifizierung zu einem Wettbewerbsvorteil führen.
@@ -274,9 +275,10 @@ Die DSGVO stellt verschiedenste Forderungen für die sichere Erhebung, Speicheru
 \end{itemize}
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 \begin{itemize}
-  \item Die Umsetzung von IAM kann kostspielig sein denn das Management und die eingesetzten Technologien sind teuer. Rechtlichen Vorgaben sind jedoch nicht optional und die Risiken von fehlendem IAM können enorm sein.
+  \item Verschiedenste Mitarbeiter sind direkt im Identitäts- und Berechtigungsmanagement involviert, so z.B. CIO, CISO, IT-Betrieb, Helpdesk und Personalabteilung. Hierbei müssen im Zuge der Minimierung von Sicherheitsrisiken strikte Prozesse definiert werden. Als Beispiel soll ein Helpdesk Mitarbeiter dienen. Wenn dieser im Rahmen von Authentifizierungsproblemen jedem Zugriff auf alle Systeme geben kann wird er direkte Anlaufstelle für bösartige Angreifer und lässt sich durch Social Engineering möglicherweise leicht Täuschen.
+  \item Die Umsetzung von IAM kann kostspielig sein denn das Management und die eingesetzten Technologien sind teuer. Rechtlichen Vorgaben sind jedoch nicht optional und die Risiken von fehlendem IAM können enorm sein
   \item Es gibt eine Vielzahl rechtlicher Vorgaben welche die Umsetzung von Identitäts- und Berechtigungsmanagement fordern. So z.B. die EuroSOX, KonTraG, BDSG und die EU-DSGVO
-  \item Die sorgfältige Umsetzung von Identitäts- und Berechtigungsmanagement im Rahmen eines Informationssicherheitsmanagementsystems spielt eine zentrale Rolle im Risikomanagement
+  \item Die sorgfältige Umsetzung von Identitäts- und Berechtigungsmanagement im Rahmen eines Informationssicherheitsmanagementsystems spielt eine zentrale Rolle in der Informationssicherheit
 \end{itemize}
 \section{Fazit}
 \subsection{Zusammenfassung}
@@ -301,9 +303,13 @@ Die grundlegenden Aufgaben und Prozesse des Identitäts- und Berechtigungsmanage
   \item Dem Schutz von Ressourcen im Rahmen der Informationssicherheit
 \end{itemize}
 \paragraph{Wie wird das Identitäts und Berechtigungsmanagement im Kontext der Sicherheit in der Informationstechnik eingesetzt?}
-Das Identitäts- und Berechtigungsmanagement wird eingesetzt um Zugriffe auf schützenswerte Ressourcen einzuschränken. Dies geschieht durch geeignete Authentifizierungs und Authorisierungsverfahren.
+\begin{itemize}
+  \item Umsetzung des Principle of Least Privilege im Kontext von schützenswerten Ressourcen. Dies geschieht durch geeignete Authentifizierungs und Authorisierungsverfahren
+  \item Sichere Speicherung von personenbezogenen Daten
+  \item Einsatz von Multifaktor Authentifizierung zur Minimierung von Sicherheitsrisiken
+\end{itemize}
 \paragraph{Zuständigkeit für Identitäts- und Berechtigungsmanagement}
-Für die Planung und Umsetzung der Prozessen des Identitäts- und Berechtigungsmanagements ist im Unternehmen der CIO verantwortlich. Dieser wird ggf. durch den CISO unterstützt denn Identitäts- und Berechtigungsmanagement ist ein sicherheitskritischer Prozess. Operativ involviert ist der IT-Betrieb, die Personalverwaltung und der Helpdesk. Der IT-Betrieb ist zuständig für die Implementierung und Wartung der involvierten Technik, die Personalverwaltung ist zuständig für die Erstellung, Änderung und Löschung von Identitäten und Rollen. Der Helpdesk ist die Anlaufstelle für Probleme bei der Authentifizierung und Authorisierung.
+Für die Planung und Kontrolle der Prozesse des Identitäts- und Berechtigungsmanagements ist im Unternehmen der CIO verantwortlich. Dieser wird ggf. durch den CISO unterstützt denn Identitäts- und Berechtigungsmanagement ist ein sicherheitskritischer Prozess. Operativ involviert ist der IT-Betrieb, die Personalverwaltung und der Helpdesk. Der IT-Betrieb ist zuständig für die Implementierung und Wartung der involvierten Technik, die Personalverwaltung ist zuständig für die Erstellung, Änderung und Löschung von Identitäten und Rollen. Der Helpdesk ist die Anlaufstelle für Probleme bei der Authentifizierung und Authorisierung.
 \newpage
 \section{Eidesstattliche Versicherung}
 \newpage
