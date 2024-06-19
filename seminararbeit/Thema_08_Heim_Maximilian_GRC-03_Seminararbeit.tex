@@ -67,9 +67,9 @@ Identitätsmanagement ist die Verwaltung von digitalen Identitäten im Zuge der 
 Berechtigungen oder auch Zugriffsberechtigungen beschreiben welche Identitäten auf welche Ressourcen zugreifen dürfen. Eine Berechtigung besteht aus einer zu berechtigenden Ressource und aus einer zu berechtigenden Operation für diese Ressource. Beispiele hierfür sind der Schreibzugriff auf eine Datenbank, der Lesezugriff auf Dokumente oder der Konfiguration von Rechnersystemen. (vgl. \cite{tsolkas2017} Seite 3-4) Dieser Prozess findet nach der Authentifizierung statt. Hierbei geht es um die Fragestellung \glqq{}was ist erlaubt?\grqq{}. Die Kontrolle der Berechtigungen basierend auf einer Identität wird Zugriffskontrolle oder auch Autorisierung genannt. (vgl. \cite{tsolkas2017} Seite 161-162)
 \subsection{Berechtigungsmanagement}
 %fertig
-Berechtigungsmanagement ist verantwortlich für die Festlegung welche Nutzer/Entitäten auf welche Ressourcen Zugriff haben und die Kontrolle dieser Berechtigungen. (vgl. \cite{orp4} Seite 1) Das Ziel hierbei ist das Least-Privilege-Prinzip (PoLP) umzusetzen. (vgl. \cite{orp4} Seite 2) Die Definitionen der Aufgabenbereiche im Berechtigungsmanagement divergieren wie auch beim Identitätsmanagement je nach Quelle. Jedoch lassen sich ebenso verschiedene Aufgabenbereiche identifizieren, diese sind im Folgenden vorgestellt.
+Berechtigungsmanagement ist verantwortlich für die Festlegung welche Nutzer/Entitäten auf welche Ressourcen Zugriff haben und die Kontrolle dieser Berechtigungen. (vgl. \cite{orp4} Seite 1) Ziele hiervon sind die Umsetzung des Least-Privilege-Prinzips (PoLP), eine Funktionstrennung (SoD) und Rückverfolgbarkeit von Zugriffen. (vgl. \cite{conta2017leitfaden} Seite 10-11, \cite{orp4} Seite 2) Die Definitionen der Aufgabenbereiche im Berechtigungsmanagement divergieren wie auch beim Identitätsmanagement je nach Quelle. Jedoch lassen sich ebenso verschiedene Aufgabenbereiche identifizieren, diese sind im Folgenden vorgestellt.
 \begin{itemize}
-  \item Berechtigungssteuerung: Management von Prozessen für die Provisonierung, Änderung und Deprovisionierung von Berechtigungen (vgl. \cite{orp4} Seite 1 und \cite{tsolkas2017} Seite 176)
+  \item Berechtigungskonzept und Berechtigungssteuerung: Planung des Berechtigungskonzepts, Management von Prozessen für die Provisonierung, Änderung und Deprovisionierung von Berechtigungen (vgl. \cite{orp4} Seite 1 und \cite{tsolkas2017} Seite 176)
   \item Technologie: Planung, Implementierung und Wartung der Infrastruktur zur Berechtigungskontrolle (vgl. \cite{tsolkas2017} Seite 177)
   \item Compliance: Identifikation von Standards und Gesetzen welche eingehalten werden müssen, Definition von Prozessen zur Einhaltung der Compliance Vorgaben (vgl. \cite{conta2017leitfaden} Seite 10-31)
   \item Audit: Auditierung der Compliance Vorgaben im Rahmen der Identifikation von Abweichungen zu den Vorgaben und Speicherung von Transaktionen zur Nachverfolgbarkeit (vgl. \cite{tsolkas2017} Seite 21)
@@ -85,7 +85,7 @@ Die systematische Unterteilung von Identitäts- und Berechtigungsmanagement erwe
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 % fertig
 \begin{itemize}
-  \item Die Nutzung von Identitäts- und Berechtigungsmanagement spielt eine zentrale Rolle im unternehmensweiten Sicherheitsmanagement. Durch die Steuerung welche logischen Identitäten auf welche Ressourcen zugreifen kann können eine Vielzahl an beabsichtigter und unbeabsichtigter Sicherheitsrisiken minimiert werden.
+  \item Mittels Berechtigungskontrollen kann das PoLP, eine SoD und eine Rückverfolgbarkeit umgesetzt werden, dies hat im Hinblick auf Gesetze und Sicherheitsziele viele Vorteile
   \item Das Identitäts- und Berechtigungsmanagement ist ein tiefgreifendes Thema in der IT-Governance und besteht aus verschiedenen Prozessen, Technologien und Gesetzen welche im Kontext der gesamten Unternehmenstätigkeiten betrachtet werden müssen.
 \end{itemize}
 \section{Methoden, Technologien und Tools}
@@ -162,8 +162,8 @@ Ein zentraler Prozess welcher im Rahmen des Identitätsmanagements definiert und
 \paragraph{Audit}
 Ein weiterer zentraler Prozess im Identitäts- und Berechtigungsmanagement ist die Auditierung des Ist-Zustands. Hierbei müssen verschiedenste Prozesse im Unternehemen dokumentiert und anschließend auf Konformität geprüft werden um Abweichungen vom Soll-Zustand zu identifizieren. Dabei muss auf verschiedenste Aspekte eingegangen werden, von diesen sind im Folgenden einige aufgeführt. (vgl. \cite{devlekar2022identity} Seite 397-398, \cite{tsolkas2017} Seite 123-124, 193, 204. \cite{haag2012selecting} Seite 8)
 \begin{itemize}
-  \item Sicherstellung der Funktionstrennung
-  \item Analyse der Audit-Logs (Änderungen an Identitäten und Berechtigungen)
+  \item Sicherstellung der Funktionstrennung und des PoLP
+  \item Analyse der Audit-Logs (Änderungen an Identitäten und Berechtigungen, Authentifizierungen und Authorisierungen)
   \item Compliance mit Standards und Gesetzen
   \item Sicherheit der involvierten Technik
 \end{itemize}
@@ -199,23 +199,38 @@ OpenID Connect (OIDC) ist ein auf OAuth 2.0 basierender Standard für föderiert
 \end{itemize}
 (vgl. \cite{naik2017choice})
 \subsection{Tools}
-IAM Lösungen ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM. Zur konkreten Umsetzung in Organisationen gibt einige quelloffene Lösungen und von den großen Technologiekonzernen wie Microsoft, SAP, IBM, Oracle werden kommerzielle Lösungen angeboten. Im Folgenden werden quelloffene und kommerzielle Produkte vorgestellt welche bei der Umsetzung von CIAM und IAM verwendet werden können.
+IAM Lösungen ersetzen nicht die Einhaltung von Standards und die sorgfältige Planung von IAM Prozessen. Sie sind jedoch hilfreiche Werkzeuge zur technischen Umsetzung von IAM. Zur konkreten Umsetzung in Organisationen gibt es quelloffene Lösungen, von den großen Technologiekonzernen wie Microsoft, SAP, IBM, Oracle werden kommerzielle Lösungen angeboten. Im Folgenden werden quelloffene und kommerzielle Produkte vorgestellt welche bei der Umsetzung von CIAM und IAM verwendet werden können.
 \paragraph{Shibboleth}
 %fertig
 Shibboleth ist eine auf SAML basierende, quelloffene Lösung zur Umsetzung von föderierter Identität. Shibboleth kann in diesem Kontext als Identity Provider und Service Provider verwendet werden. Somit kann eine SSO Integration von verschiedensten Anwendungen realisiert werden. (vgl. \cite{kamal2015shibboleth} Kapitel 5) Die Technologie setzt sich aus 4 Software Paketen zusammen. Die Softwarepakete sind hierbei der Identity Provider, Service Provider, Embedded Discovery Service und der Metadata Aggregator. Der Embedded Discovery Service erlaubt einem SP mehrere IdP's zur Verfügung zu stellen. Der Metadata Aggregator erlaubt die dynamische Abfrage von Metadaten vom Identity Provider (vgl. \cite{shibboleth2024software})
 \paragraph{IBM Security Verify}
 %fertig
-IBM bietet mit dem Produkt \glqq{}IBM Security Verify\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement und Customer Identitäts- und Access Management an. Dieses Produkt bietet umfangreiche Funktionalitäten wie SSO, MFA, Consent Management. Zudem wird die Funktion Identity Analytics angeboten, d.h. die automatische Analyse von Identitäten und Berechtigungen zum Zweck der Identifizierung von Abweichungen. (vgl. \cite{ibm2024verify})
+IBM bietet mit dem Produkt \glqq{}IBM Security Verify\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement und Customer Identitäts- und Access Management an. Dieses Produkt bietet umfangreiche Funktionalitäten wie SSO, MFA, Consent Management. (vgl. \cite{ibm2024verify})
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/Verify.png}
+  \caption{IBM Security Verify - Von: \url{https://www.ibm.com/de-de/products/verify-saas}}\label{figure:verify}
+\end{figure}
 \paragraph{Microsoft Entra ID}
 Microsoft bietet mit dem Produkt \glqq{}Microsoft Entra ID\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement von Microsoft und drittpartei Diensten an. Dieses Produkt bietet Funktionen wie z.B. Multi-Faktor-Authentifizierung mittels Microsoft Authenticator.
-\paragraph{SAP Cloud Identity Access Governance}
-SAP bietet mit dem Produkt \glqq{}SAP Cloud Identity Access Governenace\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement an.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/Entra.png}
+  \caption{Microsoft Entra ID - Von: \url{https://www.microsoft.com/de-de/security/business/microsoft-entra}}\label{figure:entra}
+\end{figure}
+%\paragraph{SAP Cloud Identity Access Governance}
+%SAP bietet mit dem Produkt \glqq{}SAP Cloud Identity Access Governenace\grqq{} eine Cloud basierte Lösung zum Identitäts- und Berechtigungsmanagement an.
 \paragraph{Okta Inc.}
 Das Unternehmen Okta Inc. ist ein in den USA ansässiges Unternehmen welches sich auf IAM spezialisiert hat. Mit rund 6000 Mitarbeitern und mehr als einer Milliarde US-Dollar an Umsatz ist es ein führender Hersteller von IAM Produkten. Vom Unternehmen werden 2 Produkte angeboten. Customer Identity Cloud und Workforce Identity Cloud. Customer Identity Cloud ist eine Lösung zum Customer Identity Management, d.h. es ermöglicht die sichere Verwaltung und Authentifizierung von Kunden-Identitäten. Workforce Identity Cloud ist eine Lösung zum Unternehmensinternen Identitäts- und Berechtigungsmanagement.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/Workforce.png}
+  \caption{Okta Workforce Identity Cloud - Von: \url{https://thectoclub.com/tools/best-identity-and-access-management-solutions/}}\label{figure:okta}
+\end{figure}
 \subsection{Erkenntnisse im Kontext von IT-GRC}
 \begin{itemize}
   \item Es existieren eine Vielzahl an normativen Standards wie ISO 27001, IT-Grundschutz und NIST 800-53A welche nach Identitäts- und Berechtigungsmanagement fordern und Umsetzungshinweise definieren
-  \item Professionelle IAM Lösungen können durch eine Vielzahl an Funktionalitäten dazu beitragen Identitäts- und Berechtigungsmanagement effizient umzusetzen.
+  \item Professionelle IAM Lösungen können durch eine Vielzahl an Funktionalitäten dazu beitragen Identitäts- und Berechtigungsmanagement effizient umzusetzen
   \item Es existiert eine Vielzahl an Technologien welche eine interoperable Umsetzung von Identitäts- und Berechtigungsmanagement ermöglichen
 \end{itemize}
 \section{Betriebliches Identitäts- und Berechtigungsmanagement}
@@ -244,7 +259,7 @@ Die Signifikanz von Identitäts- und Berechtigungsmanagement in Unternehmen ist 
 Die wirtschaftlichen Schäden durch Datendiebstahl und unautorisierte Kontrolle sind immens und steigen stetig. (vgl. \cite{furnell2020understanding} Seite 154) Wenn ein Mitarbeiter eine Vielzahl an Passwörtern für die unternehmensinternen/unternehmensexternen Dienste verwalten muss kann dies zur unsachgemäßen Handhabung führen - so z.B. Notizen mit Passwörtern oder die Verwendung von schwachen Passwörtern, dies erhöht die Wahrscheinlichkeit von Sicherheitrisiken. (vgl. \cite{haag2012selecting} Seite 6-8) Im Jahr 2017 fiel Deloitte einem Cyberangriff zum Opfer. Hierbei wurden sensible Daten geklaut. Grund für den Cyberangriff war ein Administratoraccount ohne Zugriffsbeschränkungen welcher nur mittels Passwort, ohne MFA geschützt war. (vgl. \cite{deloitte2017}) Mittels fest definierter Prozesse des Identitäts Lebenszyklus und der Zugriffssteuerung und Auditierung dieser können Risiken für ähnliche Angriffe minimiert werden.
 \paragraph{Produktivität}
 %fertig
-Im vorherigen Abschnitt wurde die sicherheitstechnische Signifikanz von Identitäts- und Berechtigungsmanagement aufgezeigt. Dies kann jedoch einen negativen Einfluss auf die Produktivität von Mitarbeitern haben. So führt z.B. die Verwendung von mehreren verschiedenen Systemen, alle mit unterschiedlichen Authentifizierungsverfahren dazu dass Mitarbeiter verschiedene Passwörter verwalten müssen oder sich in jedem System separat authentifizieren müssen. (vgl. \cite{radha2012survey} Seite 138, \cite{haag2012selecting} Seite 8-9) Ein weiterer Aspekt sind vergessene Passwörter mit Unterbrechungen im Arbeitsablauf und hohem Helpdesk aufwand. Mit der Anwendung von SSO Verfahren lässt sich dieser Aufwand auf ein Minimum reduzieren. (vgl. \cite{thakur2015user} Seite 2-3, \cite{haag2012selecting} Seite 8-9) ährend die Umsetzung des Principle of Least Privilege wünscheswert ist können schlecht konfigurierte Zugriffsberechtigungen dazu führen dass Mitarbeiter ihre Arbeit unterbrechen müssen um neue Rechte anzufordern. Dies kann unter Umständen zu teuren Verzögerungen im direkten Arbeitsablauf adminstrativer oder operativer Aufgaben führen. (vgl. \cite{weishaupl2015towards} Seite 1-1)
+Im vorherigen Abschnitt wurde die sicherheitstechnische Signifikanz von Identitäts- und Berechtigungsmanagement aufgezeigt. Dies kann jedoch einen negativen Einfluss auf die Produktivität von Mitarbeitern haben. So führt z.B. die Verwendung von mehreren verschiedenen Systemen, alle mit unterschiedlichen Authentifizierungsverfahren dazu dass Mitarbeiter verschiedene Passwörter verwalten müssen oder sich in jedem System separat authentifizieren müssen. (vgl. \cite{radha2012survey} Seite 138, \cite{haag2012selecting} Seite 8-9) Ein weiterer Aspekt sind vergessene Passwörter mit Unterbrechungen im Arbeitsablauf und hohem Helpdesk Aufwand. Mit der Anwendung von SSO Verfahren lässt sich dieser Aufwand auf ein Minimum reduzieren. (vgl. \cite{thakur2015user} Seite 2-3, \cite{haag2012selecting} Seite 8-9) Während die Umsetzung des Principle of Least Privilege wünscheswert ist können schlecht konfigurierte Zugriffsberechtigungen dazu führen dass Mitarbeiter ihre Arbeit unterbrechen müssen um neue Rechte anzufordern. Dies kann unter Umständen zu teuren Verzögerungen im direkten Arbeitsablauf adminstrativer oder operativer Aufgaben führen. (vgl. \cite{weishaupl2015towards} Seite 1-1)
 \paragraph{Kundenerlebnis}
 %fertig
 Im Kontext des Customer IAM führen ungeeignete IAM Lösungen zu erhöhter Komplexität für den Nutzer. Eine strikte Umsetzung von starken Passwörtern oder die Nutzung einer weiteren MFA-App kann für den Kunden abschreckend sein. (vgl. \cite{azhar2014economics} Seite 545, \cite{liveretos2022customer} Seite 472) Somit steigt der Kunde möglicherweise zur Konkurrenz um. Durch das Anbieten von SSO mittels beliebter externer Dienste (Google, Github, Facebook) lässt sich die Komplexität und das Risiko von Sicherheitsproblemen reduzieren.
@@ -282,11 +297,12 @@ Die DSGVO stellt verschiedenste Forderungen für die sichere Erhebung, Speicheru
 \end{itemize}
 \section{Fazit}
 \subsection{Zusammenfassung}
+Das Identitäts- und Berechtigungsmanagement ist eine zentrale Disziplin in der IT-Governance und Informationssicherheit. Die effiziente Speicherung, Nutzung und Weitergabe von Identitätsdaten im Unternehmen hat einen hohen Mehrwert denn manuelle Prozesse und Bürokratie sind unsicher und teuer. Berechtigungskontrollen helfen verschiedenste Anforderungen zu erfüllen, so z.B. Principle of Least Privilege (PoLP), Funktionstrennung (SoD) und Rückverfolgbarkeit von Zugriffen. Im Kontext von IT-GRC gibt es mehrere Gesetze und Standards welche Einfluss auf das betriebliche Identitäts- und Berechtigungsmanagement haben. Mithilfe der Vielzahl an Standards, Technologien und Werkzeugen lassen sich IT-GRC Anforderungen systematisch und effizient erreichen.
 \subsection{Beantwortung der Forschungsfragen}
 \paragraph{Was versteht man unter den Begriffen \glqq{}Identität\grqq{} sowie \glqq{}Identitätsmanagement\grqq{} und welche Zielstellung wird dabei verfolgt?}
-Eine (digitale) Identität ist eine Menge von Attributen und Rollen, inklusive Bezeichner und Zugangsdaten zur Authentifikation. So kann eine Identität eine Person, ein IT-System oder eine Anwendung darstellen. Eine Identität kann einer Entität, also einer Person oder einer Organisation zugeordnet werden. Das Identitätsmanagement ist zuständig für die Festlegung von Prozessen zur Verwaltung, Authentifizierung und Überwachung von Identitäten. Das Ziel des Identitätsmanagements ist die systematische Speicherung von Attributen und Authentifikation von physischen Identitäten.
+Eine (digitale) Identität ist eine Menge von Attributen und Rollen, inklusive Bezeichner und Zugangsdaten zur Authentifikation. So kann eine Identität eine Person, ein IT-System oder eine Anwendung darstellen. Eine Identität kann einer Entität, also einer Person oder einer Organisation zugeordnet werden. Das Identitätsmanagement ist zuständig für die Festlegung von Prozessen zur Verwaltung, Authentifizierung und Überwachung von Identitäten. Das Ziel des Identitätsmanagements ist die systematische Speicherung, Nutzung und Weitergabe von Attributen und Authentifikation von physischen Identitäten.
 \paragraph{Was versteht man unter den Begriffen \glqq{}Berechtigung\grqq{} sowie \glqq{}Berechtigungsmanagement\grqq{} und welche Zielstellung wird dabei verfolgt?}
-Eine Berechtigung ist eine Kombination aus zu berechtigender Ressource und zu berechtigender Operation auf diese Ressource. Berechtigungsmanagement bezeichnet die Prozesse für die Zuweisung, Kontrolle, Überwachung und Entzug von Berechtigungen. Das Ziel des Berechtigungsmanagements ist die Zugangs-, Zugriffs- und Zutrittskontrolle von schützenswerten Ressourcen.
+Eine Berechtigung ist eine Kombination aus zu berechtigender Ressource und zu berechtigender Operation auf diese Ressource. Berechtigungsmanagement bezeichnet die Prozesse für die Zuweisung, Kontrolle, Überwachung und Entzug von Berechtigungen. Das Ziel des Berechtigungsmanagements ist die Zugangs-, Zugriffs- und Zutrittskontrolle von schützenswerten Ressourcen, die Funktionstrennung und die Rückverfolgbarkeit von Ressourcenzugriffen.
 \paragraph{Welche Standards, Methoden, Technologien und Tools lassen sich differenzieren?}
 Es lassen sich verschiedenste Normen wie die ISO 27001, der IT-Grundschutz oder die NIST SP 800-53A im Kontext des Identitäts- und Berechtigungsmanagements identifizieren. Diese geben etablierte Methodiken zu Umsetzung von Identitäts- und Berechtigungsmanagement an. Es haben sich einige standardisierte Verfahren zur Umsetzung von Identitäts- und Berechtigungsmanagement etabliert, so z.B. SAML, OAuth und OpenID Connect. Es gibt eine Vielzahl an Softwarelösungen zum Identitäts- und Berechtigungsmanagement, so gibt es z.B. das quelloffene Shibboleth Softwarepaket oder kommerzielle Lösungen, so z.B. von Microsoft, IBM, SAP und Okta.
 \paragraph{Welche Aufgaben und Prozesse sind im Kontext von Identitäts- und Berechtigungsmanagement zu bearbeiten?}
@@ -301,6 +317,7 @@ Die grundlegenden Aufgaben und Prozesse des Identitäts- und Berechtigungsmanage
 \begin{itemize}
   \item Die zentralisierte und systematische Speicherung von Identitätsinformationen im Zuge der Authentifikation, Nutzung im Rechnungswesen, der Rückverfolgbarkeit etc.
   \item Dem Schutz von Ressourcen im Rahmen der Informationssicherheit
+  \item Die Funktionstrennung
 \end{itemize}
 \paragraph{Wie wird das Identitäts und Berechtigungsmanagement im Kontext der Sicherheit in der Informationstechnik eingesetzt?}
 \begin{itemize}
